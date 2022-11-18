@@ -2,10 +2,10 @@ import React from "react";
 import Layout from "../routing/Layout";
 import ApodComponent from "./Component";
 import NavButtons from "./NavButtons";
-import useApod from "../../hooks/useApod";
 import useDates from "../../hooks/useDate";
+import { currentDate } from "../../utils/dates";
+import useApod from "../../hooks/useApod";
 import { formatDate } from "../../utils/formatDate";
-import { currentDate } from "../../utils/Dates";
 
 export default function ApodPage() {
   const { date } = useDates(currentDate);
