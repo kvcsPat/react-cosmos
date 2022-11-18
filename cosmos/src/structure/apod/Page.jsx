@@ -5,9 +5,10 @@ import NavButtons from "./NavButtons";
 import useApod from "../../hooks/useApod";
 import useDates from "../../hooks/useDate";
 import { formatDate } from "../../utils/formatDate";
+import { currentDate } from "../../utils/Dates";
 
 export default function ApodPage() {
-  const { date } = useDates(new Date());
+  const { date } = useDates(currentDate);
 
   const { apod } = useApod(formatDate(date));
 
