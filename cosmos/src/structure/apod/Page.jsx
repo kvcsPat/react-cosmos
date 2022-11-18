@@ -1,15 +1,15 @@
 import React from "react";
-import useApod from "../../hooks/useApod";
 import Layout from "../routing/Layout";
 import ApodComponent from "./Component";
 import NavButtons from "./NavButtons";
+import useApod from "../../hooks/useApod";
+import useDates from "../../hooks/useDate";
+import { formatDate } from "../../utils/formatDate";
 
 export default function ApodPage() {
-  //testing useApod and useFetch
-  const { apod } = useApod("date=2022-11-18");
+  const { date } = useDates(new Date());
 
-  console.log(apod);
-  //----------------------------
+  const { apod } = useApod(formatDate(date));
 
   return (
     <Layout>
