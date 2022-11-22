@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function useDates(defaultValue) {
+export default function useDate(defaultValue) {
   const [date, setDate] = useState(defaultValue);
 
   const handleDate = (value) => {
