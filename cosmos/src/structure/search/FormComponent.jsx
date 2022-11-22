@@ -5,7 +5,7 @@ export default function FormComponent() {
   const { year, month, day, handleInput, handleSubmit } = useForm();
 
   return (
-    <>
+    <div className="search">
       <h1>Search by date</h1>
       <p>
         Since June 16, 1995 NASA uploads a new image every day. You can pick a
@@ -35,6 +35,6 @@ export default function FormComponent() {
         />
         <button type="submit">view entry</button>
       </form>
-    </>
+    </div>
   );
 }
