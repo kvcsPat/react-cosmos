@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { formatDate } from "../utils/formatDate";
-import { selectedDate } from "../utils/selectedDate";
 import useDateValidation from "./useDateValidation";
 
 export default function useForm() {
@@ -17,7 +16,7 @@ export default function useForm() {
   const month = inputValues.month;
   const day = inputValues.day;
 
-  const { invalidDate } = useDateValidation(year, month, day);
+  const { invalidDate, selectedDate } = useDateValidation(year, month, day);
 
   const handleInput = (e) => {
     const name = e.target.name;
@@ -42,7 +41,7 @@ export default function useForm() {
       return;
     }
 
-    const date = formatDate(selectedDate(year, month, day));
+    const date = formatDate(selectedDate());
     navigate(`/search/apod/date=${date}`);
   };
 

@@ -1,8 +1,13 @@
-import { getDaysInMonth } from "date-fns";
+import { getDaysInMonth, subMonths } from "date-fns";
 import { currentDate, firstDate } from "../utils/dates";
-import { selectedDate } from "../utils/selectedDate";
 
 export default function useDateValidation(year, month, day) {
+  //-----DATE FROM SEARCH INPUT-----
+  const selectedDate = () => {
+    const selectedDate = subMonths(new Date(year, month, day), 1);
+    return selectedDate;
+  };
+
   //-----YEAR-----
   const yearMax = currentDate.getFullYear();
 
@@ -48,8 +53,7 @@ export default function useDateValidation(year, month, day) {
   //-----DATE RANGE-----
   const outOfRange = () => {
     const outOfRange =
-      selectedDate(year, month, day) < firstDate ||
-      selectedDate(year, month, day) > currentDate;
+      selectedDate() < firstDate || selectedDate() > currentDate;
     return outOfRange;
   };
 
@@ -61,5 +65,5 @@ export default function useDateValidation(year, month, day) {
     return invalidDate;
   };
 
-  return { invalidDate };
+  return { invalidDate, selectedDate };
 }
