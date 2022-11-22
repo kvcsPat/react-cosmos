@@ -8,9 +8,9 @@ import useApod from "../../hooks/useApod";
 import { formatDate } from "../../utils/formatDate";
 
 export default function ApodPage() {
-  const { date } = useDates(currentDate);
+  const { date } = useDates(formatDate(currentDate));
 
-  const { apod } = useApod(formatDate(date));
+  const { apod } = useApod(`date=${date}`);
 
   return (
     <Layout>
