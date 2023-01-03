@@ -1,8 +1,8 @@
 import React from "react";
 import useForm from "../../hooks/useForm";
 
-export default function FormComponent() {
-  const { year, month, day, handleInput, handleSubmit } = useForm();
+export default function FormComponent({ toggle }) {
+  const { year, month, day, handleInput, handleSubmit } = useForm(toggle);
 
   return (
     <div className="search">

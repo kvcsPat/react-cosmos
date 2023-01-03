@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { formatDate } from "../utils/formatDate";
 import useDateValidation from "./useDateValidation";
 
-export default function useForm() {
+export default function useForm(toggle) {
   const navigate = useNavigate();
 
   const [inputValues, setInputValues] = useState({
@@ -37,7 +37,7 @@ export default function useForm() {
     e.preventDefault();
 
     if (invalidDate()) {
-      console.log("invalid date");
+      toggle(true);
       return;
     }
 
