@@ -1,0 +1,23 @@
+@import "./variables/variables.scss";
+
+body {
+  margin: 0 120px;
+  font-family: $mainFont;
+  background-color: $blackColor;
+  color: $whiteColor;
+}
+
+h1 {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+p {
+  font-size: 12px;
+  font-weight: 400;
+}

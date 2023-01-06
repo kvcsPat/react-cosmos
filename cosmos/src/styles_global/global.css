@@ -1,0 +1,21 @@
+body {
+  margin: 0 120px;
+  font-family: "Montserrat", sans-serif;
+  background-color: rgb(5, 5, 5);
+  color: rgb(210, 210, 210);
+}
+
+h1 {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+p {
+  font-size: 12px;
+  font-weight: 400;
+}/*# sourceMappingURL=global.css.map */
