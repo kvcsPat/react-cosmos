@@ -1,12 +1,14 @@
-//colors
+//----------COLORS----------
 $blackColor: rgb(5, 5, 5);
-$whiteColor: rgb(210, 210, 210);
+$whiteColor: rgb(225, 225, 225);
 
-//fonts
+//----------FONTS----------
 $mainFont: "Montserrat", sans-serif;
 $numberFont: "Orbitron", sans-serif;
 
-//buttons
+//----------BUTTONS----------
+
+//clip-path border
 $btnBorder: polygon(
   0 0,
   calc(100% - 6px) 0,
@@ -22,12 +24,63 @@ $btnBorder: polygon(
   1px 1px
 );
 
+//clip-path fill
 $btnFill: polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 0 100%);
 
+//button design
 @mixin btnBefore($clipPath) {
   content: "";
   position: absolute;
   inset: 0;
-  background: $whiteColor;
+  background-color: $whiteColor;
   clip-path: $clipPath;
+}
+
+//home page animation
+$appearHome: appearHome 2.8s ease-in-out; //keyframes in global.scss
+
+//----------SOLAR SYSTEM----------
+
+//outline
+@mixin outline($width, $widthBorder) {
+  position: absolute;
+  overflow: visible;
+
+  width: $width;
+  aspect-ratio: 1;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  border-radius: 50%;
+  border: solid $widthBorder $whiteColor;
+}
+
+//planet - rotation center
+@mixin rotationCenter($deg, $length) {
+  position: absolute;
+  overflow: visible;
+
+  top: 50%;
+  left: 50%;
+  transform: rotate($deg);
+
+  animation: $appearHome, orbit $length linear infinite;
+}
+
+//planet
+@mixin planet($width, $left) {
+  content: "";
+  position: absolute;
+
+  width: $width;
+  aspect-ratio: 1;
+
+  left: $left;
+  transform: translate(-50%, -50%);
+
+  border-radius: 50%;
+
+  background-color: $whiteColor;
 }

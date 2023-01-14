@@ -2,7 +2,7 @@ body {
   margin: 0 110px;
   font-family: "Montserrat", sans-serif;
   background-color: rgb(5, 5, 5);
-  color: rgb(210, 210, 210);
+  color: rgb(225, 225, 225);
 }
 
 h1 {
@@ -18,4 +18,28 @@ h2 {
 p {
   font-size: 12px;
   font-weight: 400;
+}
+
+@-webkit-keyframes appearHome {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes appearHome {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }/*# sourceMappingURL=global.css.map */

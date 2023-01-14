@@ -6,21 +6,21 @@ import "./navbar.css";
 export default function Navbar() {
   return (
     <nav>
-      <img className="logo" src={logoDark} alt="nasa_logo" />
-      <div className="nav_btns">
-        <NavLink className="nav_btn" to="/">
+      <img className="logo" src={logoDark} alt="nasa-logo" />
+      <div className="nav-btns">
+        <NavLink className="nav-btn" to="/">
           home
         </NavLink>
-        <NavLink className="nav_btn" to="/apod">
+        <NavLink className="nav-btn" to="/apod">
           apod
         </NavLink>
-        <NavLink className="nav_btn" to="/search">
+        <NavLink className="nav-btn" to="/search">
           search
         </NavLink>
-        <NavLink className="nav_btn" to="/gallery">
+        <NavLink className="nav-btn" to="/gallery">
           gallery
         </NavLink>
-        <NavLink className="nav_btn" to="/about">
+        <NavLink className="nav-btn" to="/about">
           about
         </NavLink>
       </div>
