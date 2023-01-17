@@ -7,6 +7,7 @@
 
 .sun {
   position: absolute;
+  z-index: 2;
   width: 130px;
   aspect-ratio: 1;
   top: 50%;
@@ -37,6 +38,7 @@
 }
 .mercury-outline {
   position: absolute;
+  z-index: 2;
   overflow: visible;
   width: 156px;
   aspect-ratio: 1;
@@ -55,8 +57,8 @@
   top: 50%;
   left: 50%;
   transform: rotate(270deg);
-  -webkit-animation: appearHome 2.8s ease-in-out, orbit 90s linear infinite;
-          animation: appearHome 2.8s ease-in-out, orbit 90s linear infinite;
+  -webkit-animation: appear 2.8s ease-in-out, orbit 90s linear infinite;
+          animation: appear 2.8s ease-in-out, orbit 90s linear infinite;
 }
 
 .mercury:before {
@@ -89,6 +91,7 @@
 }
 .venus-outline {
   position: absolute;
+  z-index: 2;
   overflow: visible;
   width: 190px;
   aspect-ratio: 1;
@@ -107,8 +110,8 @@
   top: 50%;
   left: 50%;
   transform: rotate(30deg);
-  -webkit-animation: appearHome 2.8s ease-in-out, orbit 120s linear infinite;
-          animation: appearHome 2.8s ease-in-out, orbit 120s linear infinite;
+  -webkit-animation: appear 2.8s ease-in-out, orbit 120s linear infinite;
+          animation: appear 2.8s ease-in-out, orbit 120s linear infinite;
 }
 
 .venus:before {
@@ -141,6 +144,7 @@
 }
 .earth-outline {
   position: absolute;
+  z-index: 2;
   overflow: visible;
   width: 236px;
   aspect-ratio: 1;
@@ -159,8 +163,8 @@
   top: 50%;
   left: 50%;
   transform: rotate(65deg);
-  -webkit-animation: appearHome 2.8s ease-in-out, orbit 140s linear infinite;
-          animation: appearHome 2.8s ease-in-out, orbit 140s linear infinite;
+  -webkit-animation: appear 2.8s ease-in-out, orbit 140s linear infinite;
+          animation: appear 2.8s ease-in-out, orbit 140s linear infinite;
 }
 
 .earth:before {
@@ -193,6 +197,7 @@
 }
 .mars-outline {
   position: absolute;
+  z-index: 2;
   overflow: visible;
   width: 280px;
   aspect-ratio: 1;
@@ -211,8 +216,8 @@
   top: 50%;
   left: 50%;
   transform: rotate(135deg);
-  -webkit-animation: appearHome 2.8s ease-in-out, orbit 160s linear infinite;
-          animation: appearHome 2.8s ease-in-out, orbit 160s linear infinite;
+  -webkit-animation: appear 2.8s ease-in-out, orbit 160s linear infinite;
+          animation: appear 2.8s ease-in-out, orbit 160s linear infinite;
 }
 
 .mars:before {
@@ -245,6 +250,7 @@
 }
 .jupiter-outline {
   position: absolute;
+  z-index: 2;
   overflow: visible;
   width: 370px;
   aspect-ratio: 1;
@@ -263,8 +269,8 @@
   top: 50%;
   left: 50%;
   transform: rotate(300deg);
-  -webkit-animation: appearHome 2.8s ease-in-out, orbit 180s linear infinite;
-          animation: appearHome 2.8s ease-in-out, orbit 180s linear infinite;
+  -webkit-animation: appear 2.8s ease-in-out, orbit 180s linear infinite;
+          animation: appear 2.8s ease-in-out, orbit 180s linear infinite;
 }
 
 .jupiter:before {
@@ -297,6 +303,7 @@
 }
 .saturn-outline {
   position: absolute;
+  z-index: 2;
   overflow: visible;
   width: 460px;
   aspect-ratio: 1;
@@ -316,8 +323,8 @@
   top: 50%;
   left: 50%;
   transform: rotate(0);
-  -webkit-animation: appearHome 2.8s ease-in-out, orbit 200s linear infinite;
-          animation: appearHome 2.8s ease-in-out, orbit 200s linear infinite;
+  -webkit-animation: appear 2.8s ease-in-out, orbit 200s linear infinite;
+          animation: appear 2.8s ease-in-out, orbit 200s linear infinite;
 }
 
 .saturn:before {
@@ -373,6 +380,7 @@
 }
 .uranus-outline {
   position: absolute;
+  z-index: 2;
   overflow: visible;
   width: 536px;
   aspect-ratio: 1;
@@ -391,8 +399,8 @@
   top: 50%;
   left: 50%;
   transform: rotate(145deg);
-  -webkit-animation: appearHome 2.8s ease-in-out, orbit 220s linear infinite;
-          animation: appearHome 2.8s ease-in-out, orbit 220s linear infinite;
+  -webkit-animation: appear 2.8s ease-in-out, orbit 220s linear infinite;
+          animation: appear 2.8s ease-in-out, orbit 220s linear infinite;
 }
 
 .uranus:before {
@@ -425,6 +433,7 @@
 }
 .neptune-outline {
   position: absolute;
+  z-index: 2;
   overflow: visible;
   width: 580px;
   aspect-ratio: 1;
@@ -443,8 +452,8 @@
   top: 50%;
   left: 50%;
   transform: rotate(200deg);
-  -webkit-animation: appearHome 2.8s ease-in-out, orbit 240s linear infinite;
-          animation: appearHome 2.8s ease-in-out, orbit 240s linear infinite;
+  -webkit-animation: appear 2.8s ease-in-out, orbit 240s linear infinite;
+          animation: appear 2.8s ease-in-out, orbit 240s linear infinite;
 }
 
 .neptune:before {

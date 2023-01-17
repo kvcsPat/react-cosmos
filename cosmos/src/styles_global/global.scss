@@ -23,7 +23,7 @@ p {
 }
 
 //----------GLOBAL ANIMATION----------
-@keyframes appearHome {
+@keyframes appear {
   0% {
     opacity: 0;
   }
@@ -31,7 +31,25 @@ p {
   50% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes disappear {
+  0% {
+    opacity: 1;
+    z-index: 1;
+  }
+
+  50% {
+    opacity: 1;
+    z-index: 1;
+  }
+
+  100% {
+    opacity: 0;
+    z-index: 1;
   }
 }
