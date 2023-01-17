@@ -21,7 +21,7 @@ export default function useForm(toggle) {
   const handleInput = (e) => {
     const name = e.target.name;
     const value = e.target.value;
-    const next = e.target.nextSibling;
+    const next = e.target.parentNode.nextSibling;
     let limit = 2;
 
     if (name === "year") {

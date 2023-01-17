@@ -8,7 +8,7 @@
 }
 
 .welcome-title {
-  padding: 80px 0 20px 0;
+  padding: 80px 0 20px;
 }
 
 .welcome-text {
@@ -20,8 +20,8 @@
 .call-to-action {
   position: relative;
   width: 300px;
-  height: 33px;
-  padding: 4px 0 0 10px;
+  height: 35px;
+  padding: 5px 0 0 10px;
   font-weight: 400;
   font-size: 20px;
   text-transform: uppercase;
