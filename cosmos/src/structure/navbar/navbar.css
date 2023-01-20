@@ -2,21 +2,17 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 80px;
 }
-
-.logo {
+nav .logo {
   width: 50px;
 }
-
-.nav-btns {
+nav .nav-btns {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   height: 80px;
 }
-
-.nav-btn {
+nav .nav-btns a {
   position: relative;
   width: 78px;
   height: 20px;
@@ -26,8 +22,7 @@ nav {
   font-weight: 500;
   text-transform: uppercase;
 }
-
-.nav-btn:before {
+nav .nav-btns a:before {
   content: "";
   position: absolute;
   inset: 0;
@@ -35,14 +30,15 @@ nav {
   -webkit-clip-path: polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 0 100%, 0 0, 1px 1px, 1px calc(100% - 1px), calc(100% - 1px) calc(100% - 1px), calc(100% - 1px) 6.41px, calc(100% - 6px - 0.41px) 1px, 1px 1px);
           clip-path: polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 0 100%, 0 0, 1px 1px, 1px calc(100% - 1px), calc(100% - 1px) calc(100% - 1px), calc(100% - 1px) 6.41px, calc(100% - 6px - 0.41px) 1px, 1px 1px);
 }
-
-.nav-btn:hover,
-.nav-btn.active {
+nav .nav-btns a:hover,
+nav .nav-btns a.active {
   color: rgb(5, 5, 5);
 }
-
-.nav-btn:hover::before,
-.nav-btn.active::before {
+nav .nav-btns a.active {
+  font-weight: 700;
+}
+nav .nav-btns a:hover::before,
+nav .nav-btns a.active::before {
   z-index: -1;
   content: "";
   position: absolute;
@@ -50,8 +46,4 @@ nav {
   background-color: rgb(225, 225, 225);
   -webkit-clip-path: polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 0 100%);
           clip-path: polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 0 100%);
-}
-
-.nav-btn.active {
-  font-weight: 700;
 }/*# sourceMappingURL=navbar.css.map */

@@ -8,21 +8,11 @@ export default function Navbar() {
     <nav>
       <img className="logo" src={logoDark} alt="nasa-logo" />
       <div className="nav-btns">
-        <NavLink className="nav-btn" to="/">
-          home
-        </NavLink>
-        <NavLink className="nav-btn" to="/apod">
-          apod
-        </NavLink>
-        <NavLink className="nav-btn" to="/search">
-          search
-        </NavLink>
-        <NavLink className="nav-btn" to="/gallery">
-          gallery
-        </NavLink>
-        <NavLink className="nav-btn" to="/about">
-          about
-        </NavLink>
+        <NavLink to="/">home</NavLink>
+        <NavLink to="/apod">apod</NavLink>
+        <NavLink to="/search">search</NavLink>
+        <NavLink to="/gallery">gallery</NavLink>
+        <NavLink to="/about">about</NavLink>
       </div>
     </nav>
   );
