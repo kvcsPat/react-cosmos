@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import "./navButtons.css";
+import "./apodButtons.css";
 
 export default function NavButtons() {
   return (

@@ -7,15 +7,29 @@
   margin-top: 30px;
 }
 .apod-btns a {
+  display: inline-block;
   position: relative;
   width: 220px;
   height: 35px;
   padding: 5px 0 0 10px;
   font-weight: 400;
   font-size: 20px;
+  text-align: left;
   text-transform: uppercase;
 }
-.apod-btns a:before {
+.apod-btns button {
+  display: inline-block;
+  position: relative;
+  width: 220px;
+  height: 35px;
+  padding: 0 0 1px 10px;
+  font-weight: 400;
+  font-size: 20px;
+  text-align: left;
+  text-transform: uppercase;
+}
+.apod-btns a:before,
+.apod-btns button:before {
   content: "";
   position: absolute;
   inset: 0;
@@ -23,11 +37,13 @@
   -webkit-clip-path: polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 0 100%, 0 0, 1px 1px, 1px calc(100% - 1px), calc(100% - 1px) calc(100% - 1px), calc(100% - 1px) 6.41px, calc(100% - 6px - 0.41px) 1px, 1px 1px);
           clip-path: polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 0 100%, 0 0, 1px 1px, 1px calc(100% - 1px), calc(100% - 1px) calc(100% - 1px), calc(100% - 1px) 6.41px, calc(100% - 6px - 0.41px) 1px, 1px 1px);
 }
-.apod-btns a:hover {
+.apod-btns a:hover,
+.apod-btns button:hover {
   font-weight: 500;
   color: rgb(5, 5, 5);
 }
-.apod-btns a:hover::before {
+.apod-btns a:hover::before,
+.apod-btns button:hover::before {
   z-index: -1;
   content: "";
   position: absolute;
@@ -35,4 +51,4 @@
   background-color: rgb(225, 225, 225);
   -webkit-clip-path: polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 0 100%);
           clip-path: polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 0 100%);
-}/*# sourceMappingURL=navButtons.css.map */
+}/*# sourceMappingURL=apodButtons.css.map */

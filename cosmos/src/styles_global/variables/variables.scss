@@ -6,9 +6,54 @@ $whiteColor: rgb(225, 225, 225);
 $mainFont: "Montserrat", sans-serif;
 $numberFont: "Orbitron", sans-serif;
 
+//----------GENERAL VISUAL-TEXT FLEXBOX
+@mixin generalFlexbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+//----------HOME PAGE ANIMATIONS----------
+
+//planets appear
+$appear: appear 2.8s ease-in-out;
+
+//background disappears
+$disappear: disappear 2.8s ease-in-out;
+
+//-----keyframes in global.scss-----
+
 //----------BUTTONS----------
 
-//clip-path border
+//button/NavLink properties
+@mixin btnStyle($width, $top, $right, $bottom, $left) {
+  display: inline-block;
+  position: relative;
+
+  width: $width;
+  height: 35px;
+
+  padding: $top $right $bottom $left;
+
+  font-weight: 400;
+  font-size: 20px;
+
+  text-align: left;
+  text-transform: uppercase;
+}
+
+//button/NavLink hover properties
+@mixin btnHover {
+  font-weight: 500;
+  color: $blackColor;
+}
+
+@mixin btnHoverBefore {
+  z-index: -1;
+  @include btnBefore($btnFill);
+}
+
+//clip-path - for button border
 $btnBorder: polygon(
   0 0,
   calc(100% - 6px) 0,
@@ -24,10 +69,10 @@ $btnBorder: polygon(
   1px 1px
 );
 
-//clip-path fill
+//clip-path - for button fill /hover and active/
 $btnFill: polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 0 100%);
 
-//button design
+//button/NavLink design - on ::before
 @mixin btnBefore($clipPath) {
   content: "";
   position: absolute;
@@ -35,11 +80,6 @@ $btnFill: polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 0 100%);
   background-color: $whiteColor;
   clip-path: $clipPath;
 }
-
-//home page animation
-$appear: appear 2.8s ease-in-out;
-$disappear: disappear 2.8s ease-in-out;
-//keyframes in global.scss
 
 //----------SOLAR SYSTEM----------
 
@@ -73,7 +113,7 @@ $disappear: disappear 2.8s ease-in-out;
   animation: $appear, orbit $length linear infinite;
 }
 
-//planet
+//planet - on ::before
 @mixin planet($width, $left) {
   content: "";
   position: absolute;

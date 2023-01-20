@@ -1,7 +1,8 @@
+@import "../../styles_global/variables/variables.scss";
+
 .apod {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  @include generalFlexbox;
+
   padding: 10px 0 50px;
 
   .visual {

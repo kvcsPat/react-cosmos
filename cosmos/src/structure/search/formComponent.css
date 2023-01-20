@@ -48,13 +48,15 @@
 }
 .search form button {
   grid-area: button;
+  display: inline-block;
   position: relative;
+  width: 350px;
   height: 35px;
   padding: 0 0 1px 10px;
   font-weight: 400;
   font-size: 20px;
-  text-transform: uppercase;
   text-align: left;
+  text-transform: uppercase;
 }
 .search form button:before {
   content: "";
