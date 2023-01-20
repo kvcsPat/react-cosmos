@@ -7,241 +7,241 @@
   aspect-ratio: 1;
 
   background-color: $blackColor;
-}
 
-.sun {
-  position: absolute;
-  z-index: 2;
+  .sun {
+    position: absolute;
+    z-index: 2;
 
-  width: 130px;
-  aspect-ratio: 1;
-
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  border-radius: 50%;
-
-  background-color: $whiteColor;
-
-  animation: popUpSun 0.5s ease-out;
-}
-
-@keyframes popUpSun {
-  0% {
-    width: 0;
-  }
-  to {
     width: 130px;
+    aspect-ratio: 1;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background-color: $whiteColor;
+
+    animation: popUpSun 0.5s ease-out;
+
+    @keyframes popUpSun {
+      0% {
+        width: 0;
+      }
+      to {
+        width: 130px;
+      }
+    }
   }
-}
 
-//----------MERCURY----------
-.mercury-outline {
-  @include outline(156px, 1px);
-  animation: popUpMercury 0.6s ease-out;
-}
+  //----------MERCURY----------
+  .mercury-outline {
+    @include outline(156px, 1px);
+    animation: popUpMercury 0.6s ease-out;
 
-.mercury {
-  @include rotationCenter(270deg, 90s);
-}
+    .mercury {
+      @include rotationCenter(270deg, 90s);
+    }
 
-.mercury:before {
-  @include planet(10px, -78px);
-}
+    .mercury:before {
+      @include planet(10px, -78px);
+    }
 
-@keyframes popUpMercury {
-  from {
-    width: 0;
+    @keyframes popUpMercury {
+      from {
+        width: 0;
+      }
+      to {
+        width: 156px;
+      }
+    }
   }
-  to {
-    width: 156px;
+
+  //----------VENUS----------
+  .venus-outline {
+    @include outline(190px, 1px);
+    animation: popUpVenus 0.7s ease-out;
+
+    .venus {
+      @include rotationCenter(30deg, 120s);
+    }
+
+    .venus:before {
+      @include planet(12px, -95px);
+    }
+
+    @keyframes popUpVenus {
+      from {
+        width: 0;
+      }
+      to {
+        width: 190px;
+      }
+    }
   }
-}
 
-//----------VENUS----------
-.venus-outline {
-  @include outline(190px, 1px);
-  animation: popUpVenus 0.7s ease-out;
-}
+  //----------EARTH----------
+  .earth-outline {
+    @include outline(236px, 1px);
+    animation: popUpEarth 0.8s ease-out;
 
-.venus {
-  @include rotationCenter(30deg, 120s);
-}
+    .earth {
+      @include rotationCenter(65deg, 140s);
+    }
 
-.venus:before {
-  @include planet(12px, -95px);
-}
+    .earth:before {
+      @include planet(17px, -118px);
+    }
 
-@keyframes popUpVenus {
-  from {
-    width: 0;
+    @keyframes popUpEarth {
+      from {
+        width: 0;
+      }
+      to {
+        width: 236px;
+      }
+    }
   }
-  to {
-    width: 190px;
+
+  //----------MARS----------
+  .mars-outline {
+    @include outline(280px, 1px);
+    animation: popUpMars 0.9s ease-out;
+
+    .mars {
+      @include rotationCenter(135deg, 160s);
+    }
+
+    .mars:before {
+      @include planet(15px, -140px);
+    }
+
+    @keyframes popUpMars {
+      from {
+        width: 0;
+      }
+      to {
+        width: 280px;
+      }
+    }
   }
-}
 
-//----------EARTH----------
-.earth-outline {
-  @include outline(236px, 1px);
-  animation: popUpEarth 0.8s ease-out;
-}
+  //----------JUPITER----------
+  .jupiter-outline {
+    @include outline(370px, 1px);
+    animation: popUpJupiter 1s ease-out;
 
-.earth {
-  @include rotationCenter(65deg, 140s);
-}
+    .jupiter {
+      @include rotationCenter(300deg, 180s);
+    }
 
-.earth:before {
-  @include planet(17px, -118px);
-}
+    .jupiter:before {
+      @include planet(36px, -185px);
+    }
 
-@keyframes popUpEarth {
-  from {
-    width: 0;
+    @keyframes popUpJupiter {
+      from {
+        width: 0;
+      }
+      to {
+        width: 370px;
+      }
+    }
   }
-  to {
-    width: 236px;
+
+  //----------SATURN----------
+  .saturn-outline {
+    @include outline(460px, 1px);
+    animation: popUpSaturn 1.1s ease-out;
+
+    //local variable for planet + ring animation duration
+    $duration: 200s;
+
+    .saturn,
+    .ring {
+      @include rotationCenter(0, $duration);
+    }
+
+    .saturn:before {
+      @include planet(28px, -230px);
+    }
+
+    .ring:before {
+      content: "";
+      position: absolute;
+
+      width: 38px;
+      aspect-ratio: 6;
+
+      left: -230px;
+      transform: translate(-50%, -50%);
+
+      border: solid 4px $whiteColor;
+      border-radius: 50%;
+      animation: ringBalance $duration linear infinite;
+    }
+
+    @keyframes popUpSaturn {
+      from {
+        width: 0;
+      }
+      to {
+        width: 460px;
+      }
+    }
+
+    @keyframes ringBalance {
+      100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+      }
+    }
   }
-}
 
-//----------MARS----------
-.mars-outline {
-  @include outline(280px, 1px);
-  animation: popUpMars 0.9s ease-out;
-}
+  //----------URANUS----------
+  .uranus-outline {
+    @include outline(536px, 1px);
+    animation: popUpUranus 1.2s ease-out;
 
-.mars {
-  @include rotationCenter(135deg, 160s);
-}
+    .uranus {
+      @include rotationCenter(145deg, 220s);
+    }
 
-.mars:before {
-  @include planet(15px, -140px);
-}
+    .uranus:before {
+      @include planet(18px, -268px);
+    }
 
-@keyframes popUpMars {
-  from {
-    width: 0;
+    @keyframes popUpUranus {
+      from {
+        width: 0;
+      }
+      to {
+        width: 536px;
+      }
+    }
   }
-  to {
-    width: 280px;
-  }
-}
 
-//----------JUPITER----------
-.jupiter-outline {
-  @include outline(370px, 1px);
-  animation: popUpJupiter 1s ease-out;
-}
+  //----------NEPTUNE----------
+  .neptune-outline {
+    @include outline(580px, 1px);
+    animation: popUpNeptune 1.3s ease-out;
 
-.jupiter {
-  @include rotationCenter(300deg, 180s);
-}
+    .neptune {
+      @include rotationCenter(200deg, 240s);
+    }
 
-.jupiter:before {
-  @include planet(36px, -185px);
-}
+    .neptune:before {
+      @include planet(18px, -290px);
+    }
 
-@keyframes popUpJupiter {
-  from {
-    width: 0;
-  }
-  to {
-    width: 370px;
-  }
-}
-
-//----------SATURN----------
-.saturn-outline {
-  @include outline(460px, 1px);
-  animation: popUpSaturn 1.1s ease-out;
-}
-
-//local variable for planet + ring animation duration
-$duration: 200s;
-
-.saturn,
-.ring {
-  @include rotationCenter(0, $duration);
-}
-
-.saturn:before {
-  @include planet(28px, -230px);
-}
-
-.ring:before {
-  content: "";
-  position: absolute;
-
-  width: 38px;
-  aspect-ratio: 6;
-
-  left: -230px;
-  transform: translate(-50%, -50%);
-
-  border: solid 4px $whiteColor;
-  border-radius: 50%;
-  animation: ringBalance $duration linear infinite;
-}
-
-@keyframes popUpSaturn {
-  from {
-    width: 0;
-  }
-  to {
-    width: 460px;
-  }
-}
-
-@keyframes ringBalance {
-  100% {
-    transform: translate(-50%, -50%) rotate(360deg);
-  }
-}
-
-//----------URANUS----------
-.uranus-outline {
-  @include outline(536px, 1px);
-  animation: popUpUranus 1.2s ease-out;
-}
-
-.uranus {
-  @include rotationCenter(145deg, 220s);
-}
-
-.uranus:before {
-  @include planet(18px, -268px);
-}
-
-@keyframes popUpUranus {
-  from {
-    width: 0;
-  }
-  to {
-    width: 536px;
-  }
-}
-
-//----------NEPTUNE----------
-.neptune-outline {
-  @include outline(580px, 1px);
-  animation: popUpNeptune 1.3s ease-out;
-}
-
-.neptune {
-  @include rotationCenter(200deg, 240s);
-}
-
-.neptune:before {
-  @include planet(18px, -290px);
-}
-
-@keyframes popUpNeptune {
-  from {
-    width: 0;
-  }
-  to {
-    width: 580px;
+    @keyframes popUpNeptune {
+      from {
+        width: 0;
+      }
+      to {
+        width: 580px;
+      }
+    }
   }
 }
 

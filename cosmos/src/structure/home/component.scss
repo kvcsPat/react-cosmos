@@ -1,49 +1,45 @@
 @import "../../styles_global/variables/variables.scss";
 
-.content {
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
-  align-items: flex-end;
-}
-
-.welcome-title {
-  padding: 80px 0 20px;
-}
-
 .welcome-text {
   width: 350px;
+  text-align: right;
 
-  padding-bottom: 50px;
-  text-align: end;
-}
+  h1 {
+    padding: 80px 0 20px;
+  }
 
-.call-to-action {
-  position: relative;
+  p {
+    padding-bottom: 50px;
+    text-align: end;
+  }
 
-  width: 300px;
-  height: 35px;
+  a {
+    display: inline-block;
+    position: relative;
 
-  padding: 5px 0 0 10px;
+    width: 300px;
+    height: 35px;
 
-  font-weight: 400;
-  font-size: 20px;
+    padding: 5px 0 0 10px;
 
-  text-transform: uppercase;
-}
+    font-weight: 400;
+    font-size: 20px;
 
-.call-to-action:before {
-  @include btnBefore($btnBorder);
-}
+    text-align: left;
+    text-transform: uppercase;
+  }
 
-.call-to-action:hover,
-.call-to-action.active {
-  font-weight: 500;
-  color: $blackColor;
-}
+  a:before {
+    @include btnBefore($btnBorder);
+  }
 
-.call-to-action:hover::before,
-.call-to-action.active::before {
-  z-index: -1;
-  @include btnBefore($btnFill);
+  a:hover {
+    font-weight: 500;
+    color: $blackColor;
+  }
+
+  a:hover::before {
+    z-index: -1;
+    @include btnBefore($btnFill);
+  }
 }

@@ -1,31 +1,26 @@
-.content {
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
-  align-items: flex-end;
-}
-
-.welcome-title {
-  padding: 80px 0 20px;
-}
-
 .welcome-text {
   width: 350px;
+  text-align: right;
+}
+.welcome-text h1 {
+  padding: 80px 0 20px;
+}
+.welcome-text p {
   padding-bottom: 50px;
   text-align: end;
 }
-
-.call-to-action {
+.welcome-text a {
+  display: inline-block;
   position: relative;
   width: 300px;
   height: 35px;
   padding: 5px 0 0 10px;
   font-weight: 400;
   font-size: 20px;
+  text-align: left;
   text-transform: uppercase;
 }
-
-.call-to-action:before {
+.welcome-text a:before {
   content: "";
   position: absolute;
   inset: 0;
@@ -33,15 +28,11 @@
   -webkit-clip-path: polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 0 100%, 0 0, 1px 1px, 1px calc(100% - 1px), calc(100% - 1px) calc(100% - 1px), calc(100% - 1px) 6.41px, calc(100% - 6px - 0.41px) 1px, 1px 1px);
           clip-path: polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 0 100%, 0 0, 1px 1px, 1px calc(100% - 1px), calc(100% - 1px) calc(100% - 1px), calc(100% - 1px) 6.41px, calc(100% - 6px - 0.41px) 1px, 1px 1px);
 }
-
-.call-to-action:hover,
-.call-to-action.active {
+.welcome-text a:hover {
   font-weight: 500;
   color: rgb(5, 5, 5);
 }
-
-.call-to-action:hover::before,
-.call-to-action.active::before {
+.welcome-text a:hover::before {
   z-index: -1;
   content: "";
   position: absolute;
