@@ -1,4 +1,5 @@
 import React from "react";
+import "./component.css";
 
 export default function ApodComponent({ apod }) {
   return (
@@ -11,7 +12,6 @@ export default function ApodComponent({ apod }) {
             <iframe
               src={apod.url}
               title="apod"
-              frameBorder="0"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             ></iframe>

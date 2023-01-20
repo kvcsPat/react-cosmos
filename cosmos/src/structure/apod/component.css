@@ -1,0 +1,36 @@
+.apod {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 10px 0 50px;
+}
+.apod .visual {
+  overflow: visible;
+}
+.apod .visual img {
+  width: 640px;
+}
+.apod .visual #iframe-container {
+  position: relative;
+  width: 640px;
+  height: 360px;
+  overflow: hidden;
+}
+.apod .visual iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border: 0;
+}
+.apod .info {
+  text-align: right;
+  width: 350px;
+}
+.apod .info h1 {
+  padding-bottom: 10px;
+}
+.apod .info h2 {
+  padding-bottom: 25px;
+}/*# sourceMappingURL=component.css.map */
