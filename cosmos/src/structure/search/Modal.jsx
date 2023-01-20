@@ -1,18 +1,19 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import "./modal.css";
 
 export default function SearchModal({ toggle }) {
   return (
-    <div className="search-modal-background">
-      <div className="search-modal">
-        <h1 className="search-modal-title">Houston, we have a problem!</h1>
-        <p className="search-modal-text">
+    <div className="search-modal">
+      <div className="card">
+        <h1>Houston, we have a problem!</h1>
+        <p>
           It seems you have entered an incorrect date. Try something else!
           Having trouble with the date format? Here is an example:
         </p>
-        <p className="search-modal-example">2005 04 01</p>
-        <button className="search-modal-btn" onClick={() => toggle(false)}>
-          <span class="material-symbols-sharp">close</span>
+        <NavLink to="/search/apod/date=2005-04-01">2005 04 01</NavLink>
+        <button onClick={() => toggle(false)}>
+          <span class="material-icons">close</span>
         </button>
       </div>
     </div>

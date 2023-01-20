@@ -1,6 +1,6 @@
 @import "../../styles_global/variables/variables.scss";
 
-.search-modal-background {
+.search-modal {
   position: fixed;
 
   width: 100%;
@@ -10,52 +10,47 @@
   left: 0;
 
   background-color: rgba(5, 5, 5, 0.5);
+
+  .card {
+    position: relative;
+
+    width: 500px;
+    height: 250px;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    padding: 60px 50px 0;
+    text-align: center;
+
+    background-color: $blackColor;
+
+    h1 {
+      padding-bottom: 25px;
+    }
+
+    p {
+      padding-bottom: 25px;
+    }
+
+    a {
+      font-weight: 500;
+      font-size: 20px;
+    }
+
+    button {
+      position: absolute;
+
+      width: 30px;
+      aspect-ratio: 1;
+
+      top: 10px;
+      right: 10px;
+    }
+  }
 }
 
-.search-modal {
-  position: relative;
-
-  width: 500px;
-  height: 250px;
-
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  padding: 60px 50px 0;
-  text-align: center;
-
-  background-color: $blackColor;
-}
-
-.search-modal:before {
+.card:before {
   @include btnBefore($btnBorder);
-}
-
-.search-modal-title {
-  padding-bottom: 25px;
-}
-
-.search-modal-text {
-  padding-bottom: 25px;
-}
-
-.search-modal-example {
-  font-weight: 500;
-  font-size: 20px;
-}
-
-.search-modal-btn {
-  position: absolute;
-
-  width: 30px;
-  aspect-ratio: 1;
-
-  top: 10px;
-  right: 10px;
-}
-
-.material-symbols-sharp {
-  overflow: hidden;
-  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 40;
 }

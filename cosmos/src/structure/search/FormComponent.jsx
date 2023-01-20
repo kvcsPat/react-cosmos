@@ -7,8 +7,8 @@ export default function FormComponent({ toggle }) {
 
   return (
     <div className="search">
-      <h1 className="search-title">Search by date</h1>
-      <p className="search-text">
+      <h1>Search by date</h1>
+      <p>
         Since June 16, 1995 NASA uploads a new image every day. You can pick a
         date here to search for an APOD image.
       </p>
