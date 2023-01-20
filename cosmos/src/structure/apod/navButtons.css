@@ -22,4 +22,17 @@
   background-color: rgb(225, 225, 225);
   -webkit-clip-path: polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 0 100%, 0 0, 1px 1px, 1px calc(100% - 1px), calc(100% - 1px) calc(100% - 1px), calc(100% - 1px) 6.41px, calc(100% - 6px - 0.41px) 1px, 1px 1px);
           clip-path: polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 0 100%, 0 0, 1px 1px, 1px calc(100% - 1px), calc(100% - 1px) calc(100% - 1px), calc(100% - 1px) 6.41px, calc(100% - 6px - 0.41px) 1px, 1px 1px);
+}
+.apod-btns a:hover {
+  font-weight: 500;
+  color: rgb(5, 5, 5);
+}
+.apod-btns a:hover::before {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgb(225, 225, 225);
+  -webkit-clip-path: polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 0 100%);
+          clip-path: polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 0 100%);
 }/*# sourceMappingURL=navButtons.css.map */

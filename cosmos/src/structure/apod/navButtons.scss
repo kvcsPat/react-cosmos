@@ -27,4 +27,14 @@
   a:before {
     @include btnBefore($btnBorder);
   }
+
+  a:hover {
+    font-weight: 500;
+    color: $blackColor;
+  }
+
+  a:hover::before {
+    z-index: -1;
+    @include btnBefore($btnFill);
+  }
 }
