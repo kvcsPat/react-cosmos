@@ -1,45 +1,36 @@
-.search-modal {
+.card-modal {
   position: fixed;
+  z-index: 10;
   width: 100vw;
   height: 100vh;
   top: 0;
   left: 0;
   background-color: rgba(5, 5, 5, 0.5);
 }
-.search-modal .card {
+.card-modal .apod-card {
   position: relative;
-  width: 500px;
-  height: 250px;
-  top: 50%;
+  width: 1160px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  top: 80px;
   left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 60px 50px 0;
-  text-align: center;
+  transform: translateX(-50%);
+  padding: 50px 60px 0;
   background-color: rgb(5, 5, 5);
 }
-.search-modal .card h1 {
-  padding-bottom: 25px;
-}
-.search-modal .card p {
-  padding-bottom: 25px;
-}
-.search-modal .card a {
-  font-weight: 500;
-  font-size: 20px;
-}
-.search-modal .card button {
-  position: absolute;
-  width: 30px;
-  aspect-ratio: 1;
-  top: 10px;
-  right: 10px;
-}
-
-.card:before {
+.card-modal .apod-card:before {
   content: "";
   position: absolute;
   inset: 0;
   background-color: rgb(225, 225, 225);
   -webkit-clip-path: polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 0 100%, 0 0, 1px 1px, 1px calc(100% - 1px), calc(100% - 1px) calc(100% - 1px), calc(100% - 1px) 6.41px, calc(100% - 6px - 0.41px) 1px, 1px 1px);
           clip-path: polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 0 100%, 0 0, 1px 1px, 1px calc(100% - 1px), calc(100% - 1px) calc(100% - 1px), calc(100% - 1px) 6.41px, calc(100% - 6px - 0.41px) 1px, 1px 1px);
+}
+.card-modal button {
+  position: absolute;
+  width: 30px;
+  aspect-ratio: 1;
+  top: 10px;
+  right: 10px;
 }/*# sourceMappingURL=modal.css.map */

@@ -1,0 +1,59 @@
+@import "../../styles_global/variables/variables.scss";
+
+.image-card {
+  position: relative;
+
+  overflow: hidden;
+
+  width: 100%;
+  height: 100%;
+
+  cursor: pointer;
+
+  .text {
+    position: absolute;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+
+    z-index: 1;
+
+    width: 100%;
+    height: 100%;
+
+    padding: 15px;
+
+    text-align: right;
+
+    background-color: $blackColorTransparent;
+
+    opacity: 0;
+    transition: opacity 0.9s ease-out;
+
+    h1 {
+      padding-bottom: 10px;
+
+      font-size: 20px;
+      font-weight: 500;
+    }
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.9s ease-out;
+  }
+}
+
+.image-card:hover .text {
+  opacity: 1;
+}
+
+.image-card:hover img {
+  transform: scale(1.3);
+}

@@ -1,0 +1,42 @@
+@import "../../styles_global/variables/variables.scss";
+
+.card-modal {
+  position: fixed;
+  z-index: 10;
+
+  width: 100vw;
+  height: 100vh;
+
+  top: 0;
+  left: 0;
+
+  background-color: $blackColorTransparent;
+
+  .apod-card {
+    position: relative;
+
+    width: 1160px;
+    height: fit-content;
+
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 50px 60px 0;
+
+    background-color: $blackColor;
+  }
+
+  .apod-card:before {
+    @include btnBefore($btnBorder);
+  }
+
+  button {
+    position: absolute;
+
+    width: 30px;
+    aspect-ratio: 1;
+
+    top: 10px;
+    right: 10px;
+  }
+}
