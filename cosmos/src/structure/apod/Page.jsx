@@ -6,6 +6,7 @@ import useDate from "../../hooks/useDate";
 import { currentDate } from "../../utils/dates";
 import useApod from "../../hooks/useApod";
 import { formatDate } from "../../utils/formatDate";
+import Loading from "../loading/Loading";
 
 export default function ApodPage() {
   const { date } = useDate(formatDate(currentDate));
@@ -14,11 +15,13 @@ export default function ApodPage() {
 
   return (
     <Layout>
-      {apod && (
+      {apod ? (
         <>
           <NavButtons />
           <ApodComponent apod={apod} />
         </>
+      ) : (
+        <Loading />
       )}
     </Layout>
   );

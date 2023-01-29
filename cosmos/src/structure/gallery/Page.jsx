@@ -6,6 +6,7 @@ import useApod from "../../hooks/useApod";
 import { formatDate } from "../../utils/formatDate";
 import CardList from "./CardList";
 import "./page.css";
+import Loading from "../loading/Loading";
 
 export default function GalleryPage() {
   const { date } = useDate(formatDate(startDate));
@@ -14,7 +15,9 @@ export default function GalleryPage() {
 
   return (
     <Layout>
-      <div className="gallery">{apod && <CardList apodList={apod} />}</div>
+      <div className="gallery">
+        {apod ? <CardList apodList={apod} /> : <Loading />}
+      </div>
     </Layout>
   );
 }

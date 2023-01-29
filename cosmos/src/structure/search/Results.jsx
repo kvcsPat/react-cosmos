@@ -6,6 +6,7 @@ import useDate from "../../hooks/useDate";
 import ApodComponent from "../apod/Component";
 import PaginationButtons from "./PaginationButtons";
 import usePagination from "../../hooks/usePagination";
+import Loading from "../loading/Loading";
 
 export default function SearchResults() {
   const params = useParams();
@@ -18,7 +19,7 @@ export default function SearchResults() {
 
   return (
     <Layout>
-      {apod && (
+      {apod ? (
         <>
           <PaginationButtons
             handlePrevious={handlePrevious}
@@ -26,6 +27,8 @@ export default function SearchResults() {
           />
           <ApodComponent apod={apod} />
         </>
+      ) : (
+        <Loading />
       )}
     </Layout>
   );
