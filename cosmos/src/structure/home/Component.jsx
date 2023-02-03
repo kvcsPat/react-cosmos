@@ -7,10 +7,13 @@ export default function HomeComponent() {
     <section className="welcome-text">
       <h1>Welcome to the page</h1>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque
-        explicabo voluptatem beatae sequi adipisci quod, facilis, culpa fugit
-        ratione quisquam pariatur, corrupti nisi minima ducimus itaque autem
-        ipsam ad eveniet!
+        This app features NASA's Astronomy Picture of the Day API, an archive
+        which contains data reaching back to 1995.
+      </p>
+      <p>
+        Each day a different image or photograph of our fascinating universe is
+        featured, along with a brief explanation written by a professional
+        astronomer.
       </p>
       <NavLink to="/apod">discover the cosmos</NavLink>
     </section>

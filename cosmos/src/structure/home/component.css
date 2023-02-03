@@ -6,7 +6,7 @@
   padding: 80px 0 20px;
 }
 .welcome-text p {
-  padding-bottom: 50px;
+  padding-bottom: 10px;
   text-align: end;
 }
 .welcome-text a {
@@ -19,6 +19,7 @@
   font-size: 20px;
   text-align: left;
   text-transform: uppercase;
+  margin-top: 40px;
 }
 .welcome-text a:before {
   content: "";
