@@ -14,6 +14,5 @@
   left: 0;
   background-color: rgb(5, 5, 5);
   opacity: 0;
-  -webkit-animation: disappear 2.8s ease-in-out;
-          animation: disappear 2.8s ease-in-out;
+  animation: disappear 2.8s ease-in-out;
 }/*# sourceMappingURL=page.css.map */

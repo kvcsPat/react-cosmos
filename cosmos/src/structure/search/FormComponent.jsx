@@ -13,7 +13,7 @@ export default function FormComponent({ toggle }) {
         date here to search for an APOD image.
       </p>
       <form onSubmit={handleSubmit}>
-        <label for="year">
+        <label>
           <input
             value={year}
             type="number"
@@ -23,7 +23,7 @@ export default function FormComponent({ toggle }) {
             onChange={handleInput}
           />
         </label>
-        <label for="month">
+        <label>
           <input
             value={month}
             type="number"
@@ -33,7 +33,7 @@ export default function FormComponent({ toggle }) {
             onChange={handleInput}
           />
         </label>
-        <label for="day">
+        <label>
           <input
             value={day}
             type="number"

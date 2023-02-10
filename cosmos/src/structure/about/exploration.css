@@ -1,0 +1,190 @@
+.exploration {
+  position: relative;
+  overflow: visible;
+  width: 600px;
+  height: 400px;
+}
+.exploration img {
+  position: absolute;
+  width: 200px;
+  aspect-ratio: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -53%);
+  animation: floating 8s ease-in-out infinite;
+}
+@keyframes floating {
+  50% {
+    transform: translate(-50%, -47%) rotate(-7deg);
+  }
+}
+.exploration .star {
+  position: absolute;
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-color: rgb(225, 225, 225);
+}
+.exploration #star-01 {
+  width: 10px;
+  top: 10%;
+  left: 20%;
+  animation: hint-01 8s infinite;
+}
+@keyframes hint-01 {
+  10% {
+    width: 10px;
+  }
+  15% {
+    width: 20px;
+  }
+  20% {
+    width: 10px;
+  }
+}
+.exploration #star-02 {
+  width: 12px;
+  top: 20%;
+  left: 60%;
+  animation: hint-02 8s infinite;
+}
+@keyframes hint-02 {
+  70% {
+    width: 12px;
+  }
+  75% {
+    width: 22px;
+  }
+  80% {
+    width: 12px;
+  }
+}
+.exploration #star-03 {
+  width: 14px;
+  top: 60%;
+  left: 5%;
+  animation: hint-03 8s infinite;
+}
+@keyframes hint-03 {
+  50% {
+    width: 14px;
+  }
+  55% {
+    width: 24px;
+  }
+  60% {
+    width: 14px;
+  }
+}
+.exploration #star-04 {
+  width: 16px;
+  top: 90%;
+  left: 30%;
+  animation: hint-04 8s infinite;
+}
+@keyframes hint-04 {
+  90% {
+    width: 16px;
+  }
+  95% {
+    width: 26px;
+  }
+  100% {
+    width: 16px;
+  }
+}
+.exploration #star-05 {
+  width: 18px;
+  top: 75%;
+  left: 85%;
+  animation: hint-05 8s infinite;
+}
+@keyframes hint-05 {
+  30% {
+    width: 18px;
+  }
+  35% {
+    width: 28px;
+  }
+  40% {
+    width: 18px;
+  }
+}
+.exploration #star-01:before {
+  content: "registration and login";
+  position: absolute;
+  width: -moz-max-content;
+  width: max-content;
+  transform: translateY(-100%);
+  padding-left: 30px;
+  font-size: 12px;
+  font-weight: 400;
+  color: rgb(225, 225, 225);
+  opacity: 0;
+}
+.exploration #star-02:before {
+  content: "save and share favorites";
+  position: absolute;
+  width: -moz-max-content;
+  width: max-content;
+  transform: translateY(-100%);
+  padding-left: 30px;
+  font-size: 12px;
+  font-weight: 400;
+  color: rgb(225, 225, 225);
+  opacity: 0;
+}
+.exploration #star-03:before {
+  content: "light and dark mode";
+  position: absolute;
+  width: -moz-max-content;
+  width: max-content;
+  transform: translateY(-100%);
+  padding-left: 30px;
+  font-size: 12px;
+  font-weight: 400;
+  color: rgb(225, 225, 225);
+  opacity: 0;
+}
+.exploration #star-04:before {
+  content: "tablet and mobile view";
+  position: absolute;
+  width: -moz-max-content;
+  width: max-content;
+  transform: translateY(-100%);
+  padding-left: 30px;
+  font-size: 12px;
+  font-weight: 400;
+  color: rgb(225, 225, 225);
+  opacity: 0;
+}
+.exploration #star-05:before {
+  content: "gallery pagination";
+  position: absolute;
+  width: -moz-max-content;
+  width: max-content;
+  transform: translateY(-100%);
+  padding-left: 30px;
+  font-size: 12px;
+  font-weight: 400;
+  color: rgb(225, 225, 225);
+  opacity: 0;
+}
+.exploration #star-01:hover,
+.exploration #star-02:hover,
+.exploration #star-03:hover,
+.exploration #star-04:hover,
+.exploration #star-05:hover {
+  overflow: visible;
+  width: 20px;
+  border: 3px solid rgb(225, 225, 225);
+  background-color: transparent;
+  animation: none;
+}
+.exploration #star-01:hover::before,
+.exploration #star-02:hover::before,
+.exploration #star-03:hover::before,
+.exploration #star-04:hover::before,
+.exploration #star-05:hover::before {
+  opacity: 1;
+}/*# sourceMappingURL=exploration.css.map */

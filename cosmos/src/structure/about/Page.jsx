@@ -1,10 +1,16 @@
 import React from "react";
 import Layout from "../routing/Layout";
+import "./page.css";
+import AboutComponent from "./Component";
+import Exploration from "./Exploration";
 
 export default function AboutPage() {
   return (
     <Layout>
-      <div>About</div>
+      <div className="about">
+        <Exploration />
+        <AboutComponent />
+      </div>
     </Layout>
   );
 }

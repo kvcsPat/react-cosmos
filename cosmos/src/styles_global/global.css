@@ -20,18 +20,6 @@ p {
   font-weight: 400;
 }
 
-@-webkit-keyframes appear {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
 @keyframes appear {
   0% {
     opacity: 0;
@@ -41,20 +29,6 @@ p {
   }
   100% {
     opacity: 1;
-  }
-}
-@-webkit-keyframes disappear {
-  0% {
-    opacity: 1;
-    z-index: 1;
-  }
-  50% {
-    opacity: 1;
-    z-index: 1;
-  }
-  100% {
-    opacity: 0;
-    z-index: 1;
   }
 }
 @keyframes disappear {

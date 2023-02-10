@@ -10,7 +10,6 @@
 .card-modal .apod-card {
   position: relative;
   width: 1160px;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   top: 80px;

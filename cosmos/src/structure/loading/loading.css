@@ -14,23 +14,19 @@
   left: 50%;
   transform: translate(-50%, -50%);
   opacity: 0;
-  -webkit-animation: blinking 1.5s linear infinite;
-          animation: blinking 1.5s linear infinite;
+  animation: blinking 1.5s linear infinite;
 }
 .loading-page .loading .signal-01 {
   opacity: 0;
-  -webkit-animation: signalS 1.5s linear infinite;
-          animation: signalS 1.5s linear infinite;
+  animation: signalS 1.5s linear infinite;
 }
 .loading-page .loading .signal-02 {
   opacity: 0;
-  -webkit-animation: signalM 1.5s linear infinite;
-          animation: signalM 1.5s linear infinite;
+  animation: signalM 1.5s linear infinite;
 }
 .loading-page .loading .signal-03 {
   opacity: 0;
-  -webkit-animation: signalL 1.5s linear infinite;
-          animation: signalL 1.5s linear infinite;
+  animation: signalL 1.5s linear infinite;
 }
 .loading-page .loading p {
   left: 50%;
@@ -43,40 +39,11 @@
   position: absolute;
 }
 
-@-webkit-keyframes blinking {
-  15% {
-    opacity: 0;
-  }
-  20% {
-    opacity: 1;
-  }
-  80% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
 @keyframes blinking {
   15% {
     opacity: 0;
   }
   20% {
-    opacity: 1;
-  }
-  80% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@-webkit-keyframes signalS {
-  20% {
-    opacity: 0;
-  }
-  35% {
     opacity: 1;
   }
   80% {
@@ -100,39 +67,11 @@
     opacity: 0;
   }
 }
-@-webkit-keyframes signalM {
-  35% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  80% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
 @keyframes signalM {
   35% {
     opacity: 0;
   }
   50% {
-    opacity: 1;
-  }
-  80% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@-webkit-keyframes signalL {
-  50% {
-    opacity: 0;
-  }
-  65% {
     opacity: 1;
   }
   80% {

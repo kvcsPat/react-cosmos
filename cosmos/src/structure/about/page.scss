@@ -1,0 +1,7 @@
+@import "../../styles_global/variables/variables.scss";
+
+.about {
+  @include generalFlexbox(center);
+
+  padding-top: 80px;
+}
