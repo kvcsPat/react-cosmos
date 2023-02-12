@@ -33,4 +33,7 @@
 }
 .apod .info h2 {
   padding-bottom: 25px;
+}
+.apod .info p:nth-child(4) {
+  padding-top: 10px;
 }/*# sourceMappingURL=component.css.map */

@@ -7,6 +7,7 @@ import ApodComponent from "../apod/Component";
 import PaginationButtons from "./PaginationButtons";
 import usePagination from "../../hooks/usePagination";
 import Loading from "../loading/Loading";
+import ErrorComponent from "../error/Component";
 
 export default function SearchResults() {
   const params = useParams();
@@ -25,7 +26,7 @@ export default function SearchResults() {
             handlePrevious={handlePrevious}
             handleNext={handleNext}
           />
-          <ApodComponent apod={apod} />
+          {apod?.code ? <ErrorComponent /> : <ApodComponent apod={apod} />}
         </>
       ) : (
         <Loading />

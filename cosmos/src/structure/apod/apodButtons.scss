@@ -3,7 +3,7 @@
 //this file applies to NavButtons.jsx and PaginationButtons.jsx in the search folder
 
 .apod-btns {
-  @include generalFlexbox;
+  @include generalFlexbox(flex-start);
 
   width: 640px;
   height: 40px;
