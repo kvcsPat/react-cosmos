@@ -8,7 +8,7 @@ export default function CardModal({ apod, toggle }) {
       <div className="apod-card">
         <ApodComponent apod={apod} />
         <button onClick={() => toggle(false)}>
-          <span class="material-icons">close</span>
+          <span className="material-icons">close</span>
         </button>
       </div>
     </div>

@@ -7,4 +7,4 @@ export const currentDate = new Date();
 export const firstDate = new Date(1995, 5, 16, 0);
 
 //date for gallery fetch
-export const startDate = subDays(currentDate, 11);
+export const startDate = subDays(currentDate, 29);

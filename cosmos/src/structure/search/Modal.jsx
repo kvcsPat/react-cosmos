@@ -13,7 +13,7 @@ export default function SearchModal({ toggle }) {
         </p>
         <NavLink to="/search/apod/date=2005-04-01">2005 04 01</NavLink>
         <button onClick={() => toggle(false)}>
-          <span class="material-icons">close</span>
+          <span className="material-icons">close</span>
         </button>
       </div>
     </div>

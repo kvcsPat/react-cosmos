@@ -6,9 +6,9 @@ export default function CardList({ apodList }) {
   return (
     <>
       <div className="card-list">
-        {apodList.map((apod) => (
-          <CardComponent key={apod.date} apod={apod} />
-        ))}
+        {apodList
+          .map((apod) => <CardComponent key={apod.date} apod={apod} />)
+          .reverse()}
       </div>
     </>
   );

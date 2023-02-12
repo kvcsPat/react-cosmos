@@ -16,7 +16,14 @@ export default function GalleryPage() {
   return (
     <Layout>
       <div className="gallery">
-        {apod ? <CardList apodList={apod} /> : <Loading />}
+        {apod ? (
+          <>
+            <h1>APODs from the last 30 days</h1>
+            <CardList apodList={apod} />
+          </>
+        ) : (
+          <Loading />
+        )}
       </div>
     </Layout>
   );
