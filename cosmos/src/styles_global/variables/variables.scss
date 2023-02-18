@@ -83,8 +83,8 @@ $btnFill: polygon(0 0, calc(100% - 0.3rem) 0, 100% 0.3rem, 100% 100%, 0 100%);
 
 //----------SOLAR SYSTEM----------
 
-//outline
-@mixin outline($width, $widthBorder) {
+//planet orbit
+@mixin orbit($width, $animationName, $animationDuration) {
   position: absolute;
 
   z-index: 2;
@@ -98,11 +98,12 @@ $btnFill: polygon(0 0, calc(100% - 0.3rem) 0, 100% 0.3rem, 100% 100%, 0 100%);
   transform: translate(-50%, -50%);
 
   border-radius: 50%;
-  border: solid $widthBorder $whiteColor;
+  border: solid 0.075rem $whiteColor;
+  animation: $animationName $animationDuration ease-out;
 }
 
 //planet - rotation center
-@mixin rotationCenter($deg, $length) {
+@mixin rotationCenter($deg, $name, $length) {
   position: absolute;
   overflow: visible;
 
@@ -113,7 +114,7 @@ $btnFill: polygon(0 0, calc(100% - 0.3rem) 0, 100% 0.3rem, 100% 100%, 0 100%);
   left: 50%;
   transform: translate(-50%, -50%) rotate($deg);
 
-  animation: $appear, orbit $length linear infinite;
+  animation: $appear, $name $length linear infinite;
 }
 
 //planet - on ::before

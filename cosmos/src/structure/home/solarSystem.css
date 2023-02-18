@@ -25,7 +25,7 @@
     width: 22%;
   }
 }
-.solar-system .mercury-outline {
+.solar-system .mercury-orbit {
   position: absolute;
   z-index: 2;
   overflow: visible;
@@ -35,10 +35,10 @@
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  border: solid 0.05rem rgb(225, 225, 225);
+  border: solid 0.075rem rgb(225, 225, 225);
   animation: popUpMercury 0.6s ease-out;
 }
-.solar-system .mercury-outline .mercury {
+.solar-system .mercury-orbit .mercury {
   position: absolute;
   overflow: visible;
   width: 50%;
@@ -46,13 +46,13 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(270deg);
-  animation: appear 2.8s ease-in-out, orbit 90s linear infinite;
+  animation: appear 2.8s ease-in-out, orbitMercury 90s linear infinite;
 }
-.solar-system .mercury-outline .mercury:before {
+.solar-system .mercury-orbit .mercury:before {
   content: "";
   position: absolute;
   display: block;
-  width: 15%;
+  width: 16%;
   aspect-ratio: 1;
   top: 50%;
   left: 150%;
@@ -68,7 +68,15 @@
     width: 26%;
   }
 }
-.solar-system .venus-outline {
+@keyframes orbitMercury {
+  from {
+    transform: translate(-50%, -50%) rotate(270deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(-90deg);
+  }
+}
+.solar-system .venus-orbit {
   position: absolute;
   z-index: 2;
   overflow: visible;
@@ -78,10 +86,10 @@
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  border: solid 0.05rem rgb(225, 225, 225);
+  border: solid 0.075rem rgb(225, 225, 225);
   animation: popUpVenus 0.7s ease-out;
 }
-.solar-system .venus-outline .venus {
+.solar-system .venus-orbit .venus {
   position: absolute;
   overflow: visible;
   width: 50%;
@@ -89,9 +97,9 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(30deg);
-  animation: appear 2.8s ease-in-out, orbit 120s linear infinite;
+  animation: appear 2.8s ease-in-out, orbitVenus 120s linear infinite;
 }
-.solar-system .venus-outline .venus:before {
+.solar-system .venus-orbit .venus:before {
   content: "";
   position: absolute;
   display: block;
@@ -111,7 +119,15 @@
     width: 32%;
   }
 }
-.solar-system .earth-outline {
+@keyframes orbitVenus {
+  from {
+    transform: translate(-50%, -50%) rotate(30deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(-330deg);
+  }
+}
+.solar-system .earth-orbit {
   position: absolute;
   z-index: 2;
   overflow: visible;
@@ -121,10 +137,10 @@
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  border: solid 0.05rem rgb(225, 225, 225);
+  border: solid 0.075rem rgb(225, 225, 225);
   animation: popUpEarth 0.8s ease-out;
 }
-.solar-system .earth-outline .earth {
+.solar-system .earth-orbit .earth {
   position: absolute;
   overflow: visible;
   width: 50%;
@@ -132,9 +148,9 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(65deg);
-  animation: appear 2.8s ease-in-out, orbit 140s linear infinite;
+  animation: appear 2.8s ease-in-out, orbitEarth 140s linear infinite;
 }
-.solar-system .earth-outline .earth:before {
+.solar-system .earth-orbit .earth:before {
   content: "";
   position: absolute;
   display: block;
@@ -154,7 +170,15 @@
     width: 39%;
   }
 }
-.solar-system .mars-outline {
+@keyframes orbitEarth {
+  from {
+    transform: translate(-50%, -50%) rotate(65deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(-295deg);
+  }
+}
+.solar-system .mars-orbit {
   position: absolute;
   z-index: 2;
   overflow: visible;
@@ -164,10 +188,10 @@
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  border: solid 0.05rem rgb(225, 225, 225);
+  border: solid 0.075rem rgb(225, 225, 225);
   animation: popUpMars 0.9s ease-out;
 }
-.solar-system .mars-outline .mars {
+.solar-system .mars-orbit .mars {
   position: absolute;
   overflow: visible;
   width: 50%;
@@ -175,9 +199,9 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(135deg);
-  animation: appear 2.8s ease-in-out, orbit 160s linear infinite;
+  animation: appear 2.8s ease-in-out, orbitMars 160s linear infinite;
 }
-.solar-system .mars-outline .mars:before {
+.solar-system .mars-orbit .mars:before {
   content: "";
   position: absolute;
   display: block;
@@ -197,7 +221,15 @@
     width: 47%;
   }
 }
-.solar-system .jupiter-outline {
+@keyframes orbitMars {
+  from {
+    transform: translate(-50%, -50%) rotate(135deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(-225deg);
+  }
+}
+.solar-system .jupiter-orbit {
   position: absolute;
   z-index: 2;
   overflow: visible;
@@ -207,10 +239,10 @@
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  border: solid 0.05rem rgb(225, 225, 225);
+  border: solid 0.075rem rgb(225, 225, 225);
   animation: popUpJupiter 1s ease-out;
 }
-.solar-system .jupiter-outline .jupiter {
+.solar-system .jupiter-orbit .jupiter {
   position: absolute;
   overflow: visible;
   width: 50%;
@@ -218,9 +250,9 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(300deg);
-  animation: appear 2.8s ease-in-out, orbit 180s linear infinite;
+  animation: appear 2.8s ease-in-out, orbitJupiter 180s linear infinite;
 }
-.solar-system .jupiter-outline .jupiter:before {
+.solar-system .jupiter-orbit .jupiter:before {
   content: "";
   position: absolute;
   display: block;
@@ -240,7 +272,15 @@
     width: 62%;
   }
 }
-.solar-system .saturn-outline {
+@keyframes orbitJupiter {
+  from {
+    transform: translate(-50%, -50%) rotate(300deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(-60deg);
+  }
+}
+.solar-system .saturn-orbit {
   position: absolute;
   z-index: 2;
   overflow: visible;
@@ -250,21 +290,21 @@
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  border: solid 0.05rem rgb(225, 225, 225);
+  border: solid 0.075rem rgb(225, 225, 225);
   animation: popUpSaturn 1.1s ease-out;
 }
-.solar-system .saturn-outline .saturn,
-.solar-system .saturn-outline .ring {
+.solar-system .saturn-orbit .saturn,
+.solar-system .saturn-orbit .ring {
   position: absolute;
   overflow: visible;
   width: 50%;
   aspect-ratio: 1;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) rotate(0);
-  animation: appear 2.8s ease-in-out, orbit 200s linear infinite;
+  transform: translate(-50%, -50%) rotate(0deg);
+  animation: appear 2.8s ease-in-out, orbitSaturn 200s linear infinite;
 }
-.solar-system .saturn-outline .saturn:before {
+.solar-system .saturn-orbit .saturn:before {
   content: "";
   position: absolute;
   display: block;
@@ -276,7 +316,7 @@
   border-radius: 50%;
   background-color: rgb(225, 225, 225);
 }
-.solar-system .saturn-outline .ring:before {
+.solar-system .saturn-orbit .ring:before {
   content: "";
   position: absolute;
   width: 2rem;
@@ -286,7 +326,7 @@
   transform: translate(-50%, -50%);
   border: solid 0.2rem rgb(225, 225, 225);
   border-radius: 50%;
-  animation: ringBalance 200s linear infinite;
+  animation: ringSaturn 200s linear infinite;
 }
 @keyframes popUpSaturn {
   from {
@@ -296,12 +336,23 @@
     width: 77%;
   }
 }
-@keyframes ringBalance {
-  100% {
+@keyframes orbitSaturn {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
     transform: translate(-50%, -50%) rotate(-360deg);
   }
 }
-.solar-system .uranus-outline {
+@keyframes ringSaturn {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+.solar-system .uranus-orbit {
   position: absolute;
   z-index: 2;
   overflow: visible;
@@ -311,10 +362,10 @@
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  border: solid 0.05rem rgb(225, 225, 225);
+  border: solid 0.075rem rgb(225, 225, 225);
   animation: popUpUranus 1.2s ease-out;
 }
-.solar-system .uranus-outline .uranus {
+.solar-system .uranus-orbit .uranus {
   position: absolute;
   overflow: visible;
   width: 50%;
@@ -322,9 +373,9 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(145deg);
-  animation: appear 2.8s ease-in-out, orbit 220s linear infinite;
+  animation: appear 2.8s ease-in-out, orbitUranus 220s linear infinite;
 }
-.solar-system .uranus-outline .uranus:before {
+.solar-system .uranus-orbit .uranus:before {
   content: "";
   position: absolute;
   display: block;
@@ -344,7 +395,15 @@
     width: 89%;
   }
 }
-.solar-system .neptune-outline {
+@keyframes orbitUranus {
+  from {
+    transform: translate(-50%, -50%) rotate(145deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(-215deg);
+  }
+}
+.solar-system .neptune-orbit {
   position: absolute;
   z-index: 2;
   overflow: visible;
@@ -354,10 +413,10 @@
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  border: solid 0.05rem rgb(225, 225, 225);
+  border: solid 0.075rem rgb(225, 225, 225);
   animation: popUpNeptune 1.3s ease-out;
 }
-.solar-system .neptune-outline .neptune {
+.solar-system .neptune-orbit .neptune {
   position: absolute;
   overflow: visible;
   width: 50%;
@@ -365,9 +424,9 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(200deg);
-  animation: appear 2.8s ease-in-out, orbit 240s linear infinite;
+  animation: appear 2.8s ease-in-out, orbitNeptune 240s linear infinite;
 }
-.solar-system .neptune-outline .neptune:before {
+.solar-system .neptune-orbit .neptune:before {
   content: "";
   position: absolute;
   display: block;
@@ -387,9 +446,11 @@
     width: 97%;
   }
 }
-
-@keyframes orbit {
-  100% {
-    transform: translate(-50%, -50%) rotate(360deg);
+@keyframes orbitNeptune {
+  from {
+    transform: translate(-50%, -50%) rotate(200deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(-160deg);
   }
 }/*# sourceMappingURL=solarSystem.css.map */
