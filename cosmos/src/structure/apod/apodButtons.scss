@@ -5,19 +5,19 @@
 .apod-btns {
   @include generalFlexbox(flex-start);
 
-  width: 640px;
-  height: 40px;
+  width: 32rem;
+  height: 2rem;
 
-  margin-top: 30px;
+  margin-top: 1.5rem;
 
   //NavButtons.jsx
   a {
-    @include btnStyle(220px, 5px, 0, 0, 10px);
+    @include btnStyle(11rem, 0.25rem, 0, 0.3rem, 0.5rem);
   }
 
   //PaginationButtons.jsx
   button {
-    @include btnStyle(220px, 0, 0, 1px, 10px);
+    @include btnStyle(11rem, 0.25rem, 0, 0.3rem, 0.5rem);
   }
 
   a:before,

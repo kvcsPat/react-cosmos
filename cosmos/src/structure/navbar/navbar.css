@@ -2,10 +2,11 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 80px;
+  height: 4rem;
+  font-size: 0.6rem;
 }
 nav .logo {
-  width: 50px;
+  width: 2.5rem;
 }
 nav .nav-btns {
   display: flex;
@@ -14,12 +15,10 @@ nav .nav-btns {
 }
 nav .nav-btns a {
   position: relative;
-  width: 78px;
-  height: 20px;
-  margin-left: 30px;
-  padding: 2px 0 0 7px;
-  font-size: 12px;
-  font-weight: 500;
+  width: 3.9rem;
+  height: 1rem;
+  margin-left: 1.5rem;
+  padding: 0.1rem 0 0 0.35rem;
   text-transform: uppercase;
 }
 nav .nav-btns a:before {
@@ -27,8 +26,8 @@ nav .nav-btns a:before {
   position: absolute;
   inset: 0;
   background-color: rgb(225, 225, 225);
-  -webkit-clip-path: polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 0 100%, 0 0, 1px 1px, 1px calc(100% - 1px), calc(100% - 1px) calc(100% - 1px), calc(100% - 1px) 6.41px, calc(100% - 6px - 0.41px) 1px, 1px 1px);
-          clip-path: polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 0 100%, 0 0, 1px 1px, 1px calc(100% - 1px), calc(100% - 1px) calc(100% - 1px), calc(100% - 1px) 6.41px, calc(100% - 6px - 0.41px) 1px, 1px 1px);
+  -webkit-clip-path: polygon(0 0, calc(100% - 0.3rem) 0, 100% 0.3rem, 100% 100%, 0 100%, 0 0, 0.05rem 0.05rem, 0.05rem calc(100% - 0.05rem), calc(100% - 0.05rem) calc(100% - 0.05rem), calc(100% - 0.05rem) 0.341rem, calc(100% - 0.3rem - 0.041rem) 0.05rem, 0.05rem 0.05rem);
+          clip-path: polygon(0 0, calc(100% - 0.3rem) 0, 100% 0.3rem, 100% 100%, 0 100%, 0 0, 0.05rem 0.05rem, 0.05rem calc(100% - 0.05rem), calc(100% - 0.05rem) calc(100% - 0.05rem), calc(100% - 0.05rem) 0.341rem, calc(100% - 0.3rem - 0.041rem) 0.05rem, 0.05rem 0.05rem);
 }
 nav .nav-btns a:hover,
 nav .nav-btns a.active {
@@ -44,6 +43,6 @@ nav .nav-btns a.active::before {
   position: absolute;
   inset: 0;
   background-color: rgb(225, 225, 225);
-  -webkit-clip-path: polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 0 100%);
-          clip-path: polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 0, calc(100% - 0.3rem) 0, 100% 0.3rem, 100% 100%, 0 100%);
+          clip-path: polygon(0 0, calc(100% - 0.3rem) 0, 100% 0.3rem, 100% 100%, 0 100%);
 }/*# sourceMappingURL=navbar.css.map */

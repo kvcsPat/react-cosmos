@@ -3,20 +3,20 @@
 .apod {
   @include generalFlexbox(flex-start);
 
-  padding: 10px 0 50px;
+  padding: 0.5rem 0 2.5rem;
 
   .visual {
     overflow: visible;
 
     img {
-      width: 640px;
+      width: 32rem;
     }
 
     #iframe-container {
       position: relative;
 
-      width: 640px;
-      height: 360px;
+      width: 32rem;
+      height: 18rem;
 
       overflow: hidden;
     }
@@ -37,18 +37,18 @@
   .info {
     text-align: right;
 
-    width: 350px;
+    width: 15rem;
 
     h1 {
-      padding-bottom: 10px;
+      padding-bottom: 0.5rem;
     }
 
     h2 {
-      padding-bottom: 25px;
+      padding-bottom: 1.25rem;
     }
 
     p:nth-child(4) {
-      padding-top: 10px;
+      padding-top: 0.5rem;
     }
   }
 }

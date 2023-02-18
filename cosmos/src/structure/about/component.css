@@ -1,11 +1,11 @@
 .about-text {
   text-align: right;
-  width: 350px;
-  margin-bottom: 20px;
+  width: 17.5rem;
+  margin-bottom: 1rem;
 }
 .about-text h1 {
-  padding-bottom: 20px;
+  padding-bottom: 1rem;
 }
 .about-text p {
-  padding-bottom: 10px;
+  padding-bottom: 0.5rem;
 }/*# sourceMappingURL=component.css.map */

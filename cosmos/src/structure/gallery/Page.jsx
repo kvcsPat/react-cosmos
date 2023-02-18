@@ -18,7 +18,7 @@ export default function GalleryPage() {
       <div className="gallery">
         {apod ? (
           <>
-            <h1>APODs from the last 30 days</h1>
+            <h1 className="gallery-title">APODs from the last 30 days</h1>
             <CardList apodList={apod} />
           </>
         ) : (

@@ -2,29 +2,27 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  width: 640px;
-  height: 40px;
-  margin-top: 30px;
+  width: 32rem;
+  height: 2rem;
+  margin-top: 1.5rem;
 }
 .apod-btns a {
-  display: inline-block;
+  display: block;
   position: relative;
-  width: 220px;
-  height: 35px;
-  padding: 5px 0 0 10px;
+  width: 11rem;
+  padding: 0.25rem 0 0.3rem 0.5rem;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 1rem;
   text-align: left;
   text-transform: uppercase;
 }
 .apod-btns button {
-  display: inline-block;
+  display: block;
   position: relative;
-  width: 220px;
-  height: 35px;
-  padding: 0 0 1px 10px;
+  width: 11rem;
+  padding: 0.25rem 0 0.3rem 0.5rem;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 1rem;
   text-align: left;
   text-transform: uppercase;
 }
@@ -34,8 +32,8 @@
   position: absolute;
   inset: 0;
   background-color: rgb(225, 225, 225);
-  -webkit-clip-path: polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 0 100%, 0 0, 1px 1px, 1px calc(100% - 1px), calc(100% - 1px) calc(100% - 1px), calc(100% - 1px) 6.41px, calc(100% - 6px - 0.41px) 1px, 1px 1px);
-          clip-path: polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 0 100%, 0 0, 1px 1px, 1px calc(100% - 1px), calc(100% - 1px) calc(100% - 1px), calc(100% - 1px) 6.41px, calc(100% - 6px - 0.41px) 1px, 1px 1px);
+  -webkit-clip-path: polygon(0 0, calc(100% - 0.3rem) 0, 100% 0.3rem, 100% 100%, 0 100%, 0 0, 0.05rem 0.05rem, 0.05rem calc(100% - 0.05rem), calc(100% - 0.05rem) calc(100% - 0.05rem), calc(100% - 0.05rem) 0.341rem, calc(100% - 0.3rem - 0.041rem) 0.05rem, 0.05rem 0.05rem);
+          clip-path: polygon(0 0, calc(100% - 0.3rem) 0, 100% 0.3rem, 100% 100%, 0 100%, 0 0, 0.05rem 0.05rem, 0.05rem calc(100% - 0.05rem), calc(100% - 0.05rem) calc(100% - 0.05rem), calc(100% - 0.05rem) 0.341rem, calc(100% - 0.3rem - 0.041rem) 0.05rem, 0.05rem 0.05rem);
 }
 .apod-btns a:hover,
 .apod-btns button:hover {
@@ -49,6 +47,6 @@
   position: absolute;
   inset: 0;
   background-color: rgb(225, 225, 225);
-  -webkit-clip-path: polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 0 100%);
-          clip-path: polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 0, calc(100% - 0.3rem) 0, 100% 0.3rem, 100% 100%, 0 100%);
+          clip-path: polygon(0 0, calc(100% - 0.3rem) 0, 100% 0.3rem, 100% 100%, 0 100%);
 }/*# sourceMappingURL=apodButtons.css.map */

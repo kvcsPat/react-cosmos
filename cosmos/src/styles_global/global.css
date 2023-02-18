@@ -1,23 +1,30 @@
-body {
-  margin: 0 110px;
-  font-family: "Montserrat", sans-serif;
-  background-color: rgb(5, 5, 5);
-  color: rgb(225, 225, 225);
+html {
+  font-size: calc(15px + 0.390625vw);
 }
 
-h1 {
-  font-size: 25px;
+body {
+  width: 100%;
+  max-width: 51.2rem;
+  margin: 0 auto;
+  font-family: "Montserrat", sans-serif;
+  color: rgb(225, 225, 225);
+  background-color: rgb(5, 5, 5);
+}
+body h1 {
+  font-size: 1.25rem;
   font-weight: 500;
 }
-
-h2 {
-  font-size: 12px;
+body h2 {
+  font-size: 0.6rem;
   font-weight: 400;
 }
-
-p {
-  font-size: 12px;
+body p {
+  font-size: 0.6rem;
   font-weight: 400;
+}
+body a {
+  font-size: 0.6rem;
+  font-weight: 500;
 }
 
 @keyframes appear {

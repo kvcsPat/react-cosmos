@@ -28,16 +28,15 @@ $disappear: disappear 2.8s ease-in-out;
 
 //button/NavLink properties
 @mixin btnStyle($width, $top, $right, $bottom, $left) {
-  display: inline-block;
+  display: block;
   position: relative;
 
   width: $width;
-  height: 35px;
 
   padding: $top $right $bottom $left;
 
   font-weight: 400;
-  font-size: 20px;
+  font-size: 1rem;
 
   text-align: left;
   text-transform: uppercase;
@@ -57,21 +56,21 @@ $disappear: disappear 2.8s ease-in-out;
 //clip-path - for button border
 $btnBorder: polygon(
   0 0,
-  calc(100% - 6px) 0,
-  100% 6px,
+  calc(100% - 0.3rem) 0,
+  100% 0.3rem,
   100% 100%,
   0 100%,
   0 0,
-  1px 1px,
-  1px calc(100% - 1px),
-  calc(100% - 1px) calc(100% - 1px),
-  calc(100% - 1px) calc(6px + 0.41px),
-  calc(100% - 6px - 0.41px) 1px,
-  1px 1px
+  0.05rem 0.05rem,
+  0.05rem calc(100% - 0.05rem),
+  calc(100% - 0.05rem) calc(100% - 0.05rem),
+  calc(100% - 0.05rem) calc(0.3rem + 0.041rem),
+  calc(100% - 0.3rem - 0.041rem) 0.05rem,
+  0.05rem 0.05rem
 );
 
 //clip-path - for button fill /hover and active/
-$btnFill: polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 0 100%);
+$btnFill: polygon(0 0, calc(100% - 0.3rem) 0, 100% 0.3rem, 100% 100%, 0 100%);
 
 //button/NavLink design - on ::before
 @mixin btnBefore($clipPath) {
@@ -107,22 +106,27 @@ $btnFill: polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 0 100%);
   position: absolute;
   overflow: visible;
 
+  width: 50%;
+  aspect-ratio: 1;
+
   top: 50%;
   left: 50%;
-  transform: rotate($deg);
+  transform: translate(-50%, -50%) rotate($deg);
 
   animation: $appear, orbit $length linear infinite;
 }
 
 //planet - on ::before
-@mixin planet($width, $left) {
+@mixin planet($width) {
   content: "";
   position: absolute;
+  display: block;
 
   width: $width;
   aspect-ratio: 1;
 
-  left: $left;
+  top: 50%;
+  left: 150%;
   transform: translate(-50%, -50%);
 
   border-radius: 50%;
@@ -147,9 +151,9 @@ $btnFill: polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 0 100%);
 
   transform: translateY(-100%);
 
-  padding-left: 30px;
+  padding-left: 1.5rem;
 
-  font-size: 12px;
+  font-size: 0.6rem;
   font-weight: 400;
 
   color: $whiteColor;

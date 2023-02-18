@@ -1,21 +1,25 @@
 @import "../../styles_global/variables/variables.scss";
 
 .welcome-text {
-  width: 350px;
-  text-align: right;
+  @include generalFlexbox(flex-end);
+  flex-direction: column;
+
+  width: 17.5rem;
+  height: 100%;
+
+  text-align: end;
 
   h1 {
-    padding: 80px 0 20px;
+    padding: 4rem 0 1rem;
   }
 
   p {
-    padding-bottom: 10px;
-    text-align: end;
+    padding-bottom: 0.5rem;
   }
 
   a {
-    @include btnStyle(300px, 5px, 0, 0, 10px);
-    margin-top: 40px;
+    @include btnStyle(15rem, 0.25rem, 0, 0.3rem, 0.5rem);
+    margin-top: 2rem;
   }
 
   a:before {

@@ -15,13 +15,14 @@
   .apod-card {
     position: relative;
 
-    width: 1160px;
+    max-width: 57.2rem;
+    min-width: 1024px;
     height: fit-content;
 
-    top: 80px;
+    top: 4rem;
     left: 50%;
     transform: translateX(-50%);
-    padding: 50px 60px 0;
+    padding: 2.5rem 3rem 0;
 
     background-color: $blackColor;
   }
@@ -33,10 +34,14 @@
   button {
     position: absolute;
 
-    width: 30px;
+    width: 1.5rem;
     aspect-ratio: 1;
 
-    top: 10px;
-    right: 10px;
+    top: 0.5rem;
+    right: 0.5rem;
+
+    .material-icons {
+      font-size: 1.2rem;
+    }
   }
 }
