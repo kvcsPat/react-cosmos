@@ -7,7 +7,7 @@ $whiteColor: rgb(225, 225, 225);
 $mainFont: "Montserrat", sans-serif;
 $numberFont: "Orbitron", sans-serif;
 
-//----------GENERAL VISUAL-TEXT FLEXBOX----------
+//----------GENERAL FLEXBOX----------
 @mixin generalFlexbox($align-items) {
   display: flex;
   justify-content: space-between;

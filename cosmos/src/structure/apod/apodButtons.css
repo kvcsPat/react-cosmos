@@ -49,4 +49,11 @@
   background-color: rgb(225, 225, 225);
   -webkit-clip-path: polygon(0 0, calc(100% - 0.3rem) 0, 100% 0.3rem, 100% 100%, 0 100%);
           clip-path: polygon(0 0, calc(100% - 0.3rem) 0, 100% 0.3rem, 100% 100%, 0 100%);
+}
+.apod-btns .disabled {
+  pointer-events: none;
+  color: grey;
+}
+.apod-btns .disabled:before {
+  background-color: grey;
 }/*# sourceMappingURL=apodButtons.css.map */

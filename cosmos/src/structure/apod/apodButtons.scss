@@ -34,4 +34,13 @@
   button:hover::before {
     @include btnHoverBefore;
   }
+
+  .disabled {
+    pointer-events: none;
+    color: grey;
+  }
+
+  .disabled:before {
+    background-color: grey;
+  }
 }
