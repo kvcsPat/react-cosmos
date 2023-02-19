@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "../routing/Layout";
-import "./page.css";
+import "./page.scss";
 import AboutComponent from "./Component";
 import Exploration from "./Exploration";
 

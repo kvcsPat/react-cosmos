@@ -1,6 +1,6 @@
 import React from "react";
 import CardComponent from "./CardComponent";
-import "./cardList.css";
+import "./cardList.scss";
 
 export default function CardList({ apodList }) {
   return (

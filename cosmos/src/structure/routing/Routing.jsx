@@ -9,7 +9,7 @@ import AboutPage from "../about/Page";
 
 export default function Routing() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/react-cosmos">
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/apod" element={<ApodPage />} />

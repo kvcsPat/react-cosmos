@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import logoDark from "../../assets/logo.svg";
-import "./navbar.css";
+import "./navbar.scss";
 
 export default function Navbar() {
   return (

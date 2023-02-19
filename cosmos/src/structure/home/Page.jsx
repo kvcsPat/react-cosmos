@@ -2,7 +2,7 @@ import React from "react";
 import Layout from "../routing/Layout";
 import HomeComponent from "./Component";
 import SolarSystem from "./SolarSystem";
-import "./page.css";
+import "./page.scss";
 
 export default function HomePage() {
   return (

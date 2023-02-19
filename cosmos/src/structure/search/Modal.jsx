@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import "./modal.css";
+import "./modal.scss";
 
 export default function SearchModal({ toggle }) {
   return (

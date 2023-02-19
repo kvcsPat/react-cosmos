@@ -1,6 +1,6 @@
 import React from "react";
 import ApodComponent from "../apod/Component";
-import "./modal.css";
+import "./modal.scss";
 
 export default function CardModal({ apod, toggle }) {
   return (

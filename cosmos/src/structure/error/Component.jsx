@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import kenobi from "../../assets/kenobi.jpg";
-import "../apod/component.css";
+import "../apod/component.scss";
 
 export default function ErrorComponent() {
   const params = useParams();

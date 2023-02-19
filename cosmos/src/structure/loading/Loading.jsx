@@ -3,7 +3,7 @@ import satellite from "../../assets/satellite.svg";
 import signalS from "../../assets/signal-01.svg";
 import signalM from "../../assets/signal-02.svg";
 import signalL from "../../assets/signal-03.svg";
-import "./loading.css";
+import "./loading.scss";
 
 export default function Loading() {
   return (

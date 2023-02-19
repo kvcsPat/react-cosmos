@@ -5,7 +5,7 @@ import { startDate } from "../../utils/Dates";
 import useApod from "../../hooks/useApod";
 import { formatDate } from "../../utils/formatDate";
 import CardList from "./CardList";
-import "./page.css";
+import "./page.scss";
 import Loading from "../loading/Loading";
 
 export default function GalleryPage() {

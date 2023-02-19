@@ -1,7 +1,7 @@
 import React from "react";
 import useToggle from "../../hooks/useToggle";
 import CardModal from "./Modal";
-import "./cardComponent.css";
+import "./cardComponent.scss";
 
 export default function Item({ apod }) {
   const [isOn, toggleIsOn] = useToggle(false);

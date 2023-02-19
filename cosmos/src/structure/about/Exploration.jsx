@@ -1,6 +1,6 @@
 import React from "react";
 import astornaut from "../../assets/astornaut.svg";
-import "./exploration.css";
+import "./exploration.scss";
 
 export default function Exploration() {
   return (
