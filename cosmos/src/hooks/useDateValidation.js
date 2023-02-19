@@ -1,5 +1,5 @@
 import { getDaysInMonth, subMonths } from "date-fns";
-import { currentDate, firstDate } from "../utils/dates";
+import { currentDate, firstDate } from "../utils/Dates";
 
 export default function useDateValidation(year, month, day) {
   //-----DATE FROM SEARCH INPUT-----

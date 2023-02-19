@@ -3,7 +3,7 @@ import Layout from "../routing/Layout";
 import ApodComponent from "./Component";
 import NavButtons from "./NavButtons";
 import useDate from "../../hooks/useDate";
-import { currentDate } from "../../utils/dates";
+import { currentDate } from "../../utils/Dates";
 import useApod from "../../hooks/useApod";
 import { formatDate } from "../../utils/formatDate";
 import Loading from "../loading/Loading";

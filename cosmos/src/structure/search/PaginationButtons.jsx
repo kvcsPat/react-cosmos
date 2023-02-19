@@ -1,5 +1,5 @@
 import React from "react";
-import { firstDate, currentDate } from "../../utils/dates";
+import { firstDate, currentDate } from "../../utils/Dates";
 import { formatDate } from "../../utils/formatDate";
 import { useParams } from "react-router-dom";
 import { useState } from "react";

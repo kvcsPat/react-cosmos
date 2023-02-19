@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "../routing/Layout";
 import useDate from "../../hooks/useDate";
-import { startDate } from "../../utils/dates";
+import { startDate } from "../../utils/Dates";
 import useApod from "../../hooks/useApod";
 import { formatDate } from "../../utils/formatDate";
 import CardList from "./CardList";

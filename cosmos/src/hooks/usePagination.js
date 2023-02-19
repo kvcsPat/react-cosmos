@@ -1,7 +1,7 @@
 import { addDays, isToday, subDays } from "date-fns";
 import { useNavigate } from "react-router-dom";
 import { formatDate } from "../utils/formatDate";
-import { firstDate } from "../utils/dates";
+import { firstDate } from "../utils/Dates";
 
 export default function usePagination(date, handleDate) {
   const navigate = useNavigate();
