@@ -5,42 +5,47 @@
 .apod-btns {
   @include generalFlexbox(flex-start);
 
-  width: 32rem;
-  height: 2rem;
+  max-width: 32rem;
 
   margin-top: 1.5rem;
 
-  //NavButtons.jsx
-  a {
-    @include btnStyle(11rem, 0.25rem, 0, 0.3rem, 0.5rem);
-  }
+  font-size: 16px;
 
-  //PaginationButtons.jsx
+  a,
   button {
-    @include btnStyle(11rem, 0.25rem, 0, 0.3rem, 0.5rem);
+    @include btnStyle(2.5em, 14em, 1em, $edge-size);
+
+    font-size: 1em;
+    font-weight: 700;
+
+    .material-icons {
+      color: $whiteColor;
+      font-size: 0.75rem;
+    }
   }
 
-  a:before,
-  button:before {
-    @include btnBefore($btnBorder);
+  a::before,
+  button::before {
+    @include btnBefore($border-width, $edge-size);
   }
 
   a:hover,
   button:hover {
-    @include btnHover;
+    color: $blackColor;
   }
 
   a:hover::before,
   button:hover::before {
-    @include btnHoverBefore;
+    @include btnHover($edge-size);
   }
 
   .disabled {
     pointer-events: none;
     color: grey;
-  }
-
-  .disabled:before {
     background-color: grey;
+
+    .material-icons {
+      color: grey;
+    }
   }
 }

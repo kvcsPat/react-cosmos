@@ -7,6 +7,7 @@
   width: 17.5rem;
   height: 100%;
 
+  font-size: 16px;
   text-align: end;
 
   h1 {
@@ -18,19 +19,21 @@
   }
 
   a {
-    @include btnStyle(15rem, 0.25rem, 0, 0.3rem, 0.5rem);
+    @include btnStyle(2.5em, 18em, 1em, $edge-size);
     margin-top: 2rem;
+    font-size: 1em;
+    font-weight: 700;
   }
 
-  a:before {
-    @include btnBefore($btnBorder);
+  a::before {
+    @include btnBefore($border-width, $edge-size);
   }
 
   a:hover {
-    @include btnHover;
+    color: $blackColor;
   }
 
   a:hover::before {
-    @include btnHoverBefore;
+    @include btnHover($edge-size);
   }
 }

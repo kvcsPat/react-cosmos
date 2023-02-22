@@ -2,48 +2,14 @@
 
 nav {
   @include generalFlexbox(center);
-  height: 4rem;
-
-  font-size: 0.6rem;
 
   .logo {
-    width: 2.5rem;
+    width: 2rem;
   }
 
-  .nav-btns {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+  a {
+    display: inline-grid;
 
-    a {
-      position: relative;
-
-      width: 3.9rem;
-      height: 1rem;
-
-      margin-left: 1.5rem;
-      padding: 0.1rem 0 0 0.35rem;
-
-      text-transform: uppercase;
-    }
-
-    a:before {
-      @include btnBefore($btnBorder);
-    }
-
-    a:hover,
-    a.active {
-      color: $blackColor;
-    }
-
-    a.active {
-      font-weight: 700;
-    }
-
-    a:hover::before,
-    a.active::before {
-      z-index: -1;
-      @include btnBefore($btnFill);
-    }
+    margin: 1.5em 0 1.5em 2rem;
   }
 }

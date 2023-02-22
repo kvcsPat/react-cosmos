@@ -1,71 +1,79 @@
 @import "../../styles_global/variables/variables.scss";
 
 .search {
-  width: 17.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-  margin: 0 auto;
   text-align: center;
+  margin: 4rem 0;
 
-  h1 {
-    padding: 4rem 0 1rem;
-  }
+  .text {
+    width: 17.5rem;
 
-  p {
-    padding-bottom: 2rem;
+    h1 {
+      padding-bottom: 1rem;
+    }
+
+    p {
+      padding-bottom: 2rem;
+    }
   }
 
   form {
-    display: grid;
-    grid-template-columns: minmax(auto, 100%);
-    grid-auto-rows: minmax(auto, auto);
-    grid-gap: 1rem;
-    grid-template-areas:
-      "input input input"
-      "button button button";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-size: 16px;
+
+    .inputs {
+      display: inline-flex;
+      gap: 1.25em;
+    }
 
     label {
-      grid-area: input;
-      grid-column: span 1;
-
-      position: relative;
-
-      height: 2rem;
+      @include btnStyle(2.5em, 7em, 1em, $edge-size);
+      margin-bottom: 1.25em;
 
       input {
-        padding: 0.35rem 0 0 0.75rem;
-
         font-family: $numberFont;
         font-weight: 400;
+        font-size: 1em;
 
         color: $whiteColor;
+
+        -moz-appearance: textfield;
+        appearance: textfield;
       }
 
-      input,
-      input::placeholder {
-        font-size: 1rem;
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        display: none;
       }
     }
 
-    label:before {
-      @include btnBefore($btnBorder);
+    label::before {
+      @include btnBefore($border-width, $edge-size);
     }
 
     button {
-      grid-area: button;
+      @include btnStyle(2.5em, 100%, 1em, $edge-size);
 
-      @include btnStyle(100%, 0.25rem, 0, 0.3rem, 0.5rem);
+      font-size: 16px;
+      font-weight: 700;
     }
 
-    button:before {
-      @include btnBefore($btnBorder);
+    button::before {
+      @include btnBefore($border-width, $edge-size);
     }
 
     button:hover {
-      @include btnHover;
+      color: $blackColor;
     }
 
     button:hover::before {
-      @include btnHoverBefore;
+      @include btnHover($edge-size);
     }
   }
 }

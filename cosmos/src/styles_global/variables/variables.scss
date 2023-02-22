@@ -26,59 +26,77 @@ $disappear: disappear 2.8s ease-in-out;
 
 //----------BUTTONS----------
 
-//button/NavLink properties
-@mixin btnStyle($width, $top, $right, $bottom, $left) {
-  display: block;
+//variables to set border
+$border-width: 0.15em;
+$edge-size: 0.5em;
+
+//button properties
+@mixin btnStyle($block-size, $width, $padding-left, $edge-size) {
+  display: inline-flex;
+  align-items: center;
+
   position: relative;
+  isolation: isolate;
 
-  width: $width;
+  block-size: $block-size;
+  inline-size: $width;
 
-  padding: $top $right $bottom $left;
+  padding-left: $padding-left;
 
-  font-weight: 400;
-  font-size: 1rem;
+  border: none;
 
-  text-align: left;
   text-transform: uppercase;
+
+  background-color: $whiteColor;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: $whiteColor;
+  }
+
+  clip-path: polygon(
+    0 0,
+    calc(100% - $edge-size) 0,
+    100% $edge-size,
+    100% 100%,
+    0 100%
+  );
 }
 
-//button/NavLink hover properties
-@mixin btnHover {
-  font-weight: 500;
-  color: $blackColor;
-}
-
-@mixin btnHoverBefore {
-  z-index: -1;
-  @include btnBefore($btnFill);
-}
-
-//clip-path - for button border
-$btnBorder: polygon(
-  0 0,
-  calc(100% - 0.3rem) 0,
-  100% 0.3rem,
-  100% 100%,
-  0 100%,
-  0 0,
-  0.05rem 0.05rem,
-  0.05rem calc(100% - 0.05rem),
-  calc(100% - 0.05rem) calc(100% - 0.05rem),
-  calc(100% - 0.05rem) calc(0.3rem + 0.041rem),
-  calc(100% - 0.3rem - 0.041rem) 0.05rem,
-  0.05rem 0.05rem
-);
-
-//clip-path - for button fill /hover and active/
-$btnFill: polygon(0 0, calc(100% - 0.3rem) 0, 100% 0.3rem, 100% 100%, 0 100%);
-
-//button/NavLink design - on ::before
-@mixin btnBefore($clipPath) {
+//btn ::before properties
+@mixin btnBefore($border-width, $edge-size) {
   content: "";
   position: absolute;
+
   inset: 0;
+
+  background-color: $blackColor;
+
+  z-index: -2;
+
+  clip-path: polygon(
+    $border-width $border-width,
+    calc(100% - $edge-size - $border-width * 0.5) $border-width,
+    calc(100% - $border-width) calc($edge-size + $border-width * 0.5),
+    calc(100% - $border-width) calc(100% - $border-width),
+    $border-width calc(100% - $border-width)
+  );
+}
+
+//btn-hover properites
+@mixin btnHover($edge-size) {
   background-color: $whiteColor;
-  clip-path: $clipPath;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: $whiteColor;
+  }
+
+  clip-path: polygon(
+    0 0,
+    calc(100% - $edge-size) 0,
+    100% $edge-size,
+    100% 100%,
+    0 100%
+  );
 }
 
 //----------SOLAR SYSTEM----------

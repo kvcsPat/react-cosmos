@@ -29,7 +29,7 @@ export default function useForm(toggle) {
     }
     setInputValues((values) => ({ ...values, [name]: value.slice(0, limit) }));
     if (value.length >= limit) {
-      next.focus();
+      next?.focus();
     }
   };
 

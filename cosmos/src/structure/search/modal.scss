@@ -2,6 +2,9 @@
 
 .search-modal {
   position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   width: 100vw;
   height: 100vh;
@@ -9,52 +12,50 @@
   top: 0;
   left: 0;
 
+  font-size: 16px;
   background-color: $blackColorTransparent;
 
   .card {
-    position: relative;
+    @include btnStyle(fit-content, 25rem, 0, 1em);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
-    width: 25rem;
-    height: 12.5rem;
+    padding: 2.5rem;
 
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    padding: 3rem 2.5rem 0;
     text-align: center;
+    text-transform: capitalize;
+  }
 
-    background-color: $blackColor;
+  .card::before {
+    @include btnBefore(0.2em, 1em);
+  }
 
-    h1 {
-      padding-bottom: 1.25rem;
-    }
+  h1 {
+    padding-bottom: 1.25rem;
+  }
 
-    p {
-      padding-bottom: 1.25rem;
-    }
+  p {
+    padding-bottom: 1.25rem;
+  }
 
-    a {
-      font-weight: 500;
-      font-size: 1rem;
-    }
+  a {
+    font-weight: 500;
+    font-size: 1rem;
+  }
 
-    button {
-      position: absolute;
+  button {
+    position: absolute;
 
-      width: 1.5rem;
-      aspect-ratio: 1;
+    width: 1.5rem;
+    aspect-ratio: 1;
 
-      top: 0.5rem;
-      right: 0.5rem;
+    top: 0.7rem;
+    right: 0.7rem;
 
-      .material-icons {
-        font-size: 1.2rem;
-      }
+    .material-icons {
+      font-size: 1.2rem;
+      font-weight: 700;
     }
   }
-}
-
-.card:before {
-  @include btnBefore($btnBorder);
 }
