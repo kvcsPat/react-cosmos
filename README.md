@@ -31,7 +31,7 @@ Project is created with:
 ## Live Demo
 
 This project is deployed on Netlify. You can check it here:
-[https://react-cosmos.netfliy.app](https://react-cosmos.netfliy.app)
+[https://react-cosmos.netlify.app](https://react-cosmos.netlify.app)
 
 ## Setup
 
