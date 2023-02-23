@@ -12,4 +12,9 @@ nav {
 
     margin: 1.5em 0 1.5em 2rem;
   }
+
+  a.active {
+    font-weight: 700;
+    border-bottom: solid 0.2em $whiteColor;
+  }
 }
