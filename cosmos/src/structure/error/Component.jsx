@@ -18,7 +18,7 @@ export default function ErrorComponent() {
           It seems we are having trouble getting data for this day. Maybe the
           padawan was right, and someone erased it from the archive memory...
         </p>
-        <p>Truely wonderful a mind of a child is, hm?</p>
+        <p>Truly wonderful a mind of a child is, hm?</p>
       </div>
     </div>
   );
