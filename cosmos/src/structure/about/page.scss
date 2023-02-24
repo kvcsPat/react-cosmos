@@ -4,4 +4,10 @@
   @include generalFlexbox(center);
 
   padding-top: 4rem;
+
+  //---------MEDIA QUERY----------
+  @media (width <= $breakpointLarge) {
+    @include breakpointFlexbox;
+    padding-top: 0;
+  }
 }

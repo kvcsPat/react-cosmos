@@ -7,8 +7,9 @@ html {
 
 body {
   width: 100%;
-  max-width: 51.2rem;
+  max-width: 55rem;
 
+  padding: 0 1.9rem;
   margin: 0 auto;
 
   font-family: $mainFont;
@@ -34,6 +35,19 @@ body {
   a {
     font-size: 0.6rem;
     font-weight: 500;
+  }
+
+  //----------MEDIA QUERY----------
+  @media (width <= $breakpointLarge) {
+    h1 {
+      font-size: 25px;
+    }
+
+    h2,
+    p,
+    a {
+      font-size: 14px;
+    }
   }
 }
 

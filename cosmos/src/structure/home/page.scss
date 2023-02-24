@@ -4,6 +4,11 @@
   @include generalFlexbox(flex-start);
 
   width: 100%;
+
+  //----------MEDIA QUERY----------
+  @media (width <= $breakpointLarge) {
+    @include breakpointFlexbox;
+  }
 }
 
 .home:before {

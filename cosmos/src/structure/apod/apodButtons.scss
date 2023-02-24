@@ -18,6 +18,10 @@
     font-size: 1em;
     font-weight: 700;
 
+    .text-mobile {
+      display: none;
+    }
+
     .material-icons {
       color: $whiteColor;
       font-size: 0.75rem;
@@ -46,6 +50,33 @@
 
     .material-icons {
       color: grey;
+    }
+  }
+}
+
+//----------MEDIA QUERY----------
+@media (width <= $breakpointLarge) {
+  .apod-btns {
+    @include generalFlexbox(center);
+
+    max-width: 100%;
+  }
+}
+
+@media (width <= $breakpointMedium) {
+  .apod-btns {
+    a,
+    button {
+      @include btnStyle(2em, 6em, 0, $edge-size);
+      justify-content: center;
+
+      .text-mobile {
+        display: inline-flex;
+      }
+
+      .btn-text {
+        display: none;
+      }
     }
   }
 }

@@ -1,3 +1,5 @@
+@import "../../styles_global/variables/variables.scss";
+
 .about-text {
   text-align: right;
 
@@ -11,5 +13,15 @@
 
   p {
     padding-bottom: 0.5rem;
+  }
+}
+
+//----------MEDIA QUERY----------
+@media (width <= $breakpointLarge) {
+  .about-text {
+    padding-top: 2rem;
+    padding-bottom: 2.5rem;
+
+    text-align: center;
   }
 }

@@ -40,13 +40,15 @@ export default function PaginationButtons({ handlePrevious, handleNext }) {
         className={`previous-btn ${isDisabled.isFirstDate ? "disabled" : ""}`}
         onClick={handlePrevious}
       >
-        <span className="material-icons">arrow_back_ios</span> previous day
+        <span className="material-icons">arrow_back_ios</span>
+        <span className="btn-text">previous day</span>
       </button>
       <button
         className={`previous-btn ${isDisabled.isCurrentDate ? "disabled" : ""}`}
         onClick={handleNext}
       >
-        next day <span className="material-icons">arrow_forward_ios</span>
+        <span className="btn-text">next day</span>
+        <span className="material-icons">arrow_forward_ios</span>
       </button>
     </div>
   );

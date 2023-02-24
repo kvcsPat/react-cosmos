@@ -5,8 +5,10 @@
 
   overflow: visible;
 
-  width: 30rem;
-  height: 20rem;
+  max-width: 30rem;
+  width: 100%;
+
+  aspect-ratio: 1.5;
 
   //----------ASTRONAUT----------
   img {
@@ -31,6 +33,8 @@
   //----------STARS----------
   .star {
     position: absolute;
+
+    overflow: visible;
 
     aspect-ratio: 1;
 
@@ -207,5 +211,25 @@
   #star-04:hover::before,
   #star-05:hover::before {
     opacity: 1;
+  }
+}
+
+//---------MEDIA QUERY----------
+@media (width <= $breakpointLarge) {
+  .exploration {
+    #star-02::before {
+      transform: translate(-100%, 100%);
+      padding-right: 0.5rem;
+    }
+
+    #star-03::before {
+      transform: translate(-25%, 100%);
+      padding-top: 0.25rem;
+    }
+
+    #star-05::before {
+      transform: translate(-100%, -100%);
+      padding-right: 0.5rem;
+    }
   }
 }

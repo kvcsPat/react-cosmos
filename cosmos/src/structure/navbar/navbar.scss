@@ -3,18 +3,116 @@
 nav {
   @include generalFlexbox(center);
 
-  .logo {
+  min-height: 2rem;
+
+  margin-top: 0.5rem;
+
+  img {
     width: 2rem;
   }
 
-  a {
-    display: inline-grid;
+  .nav-btns {
+    display: flex;
+    align-items: center;
 
-    margin: 1.5em 0 1.5em 2rem;
+    a {
+      margin-left: 2rem;
+    }
+
+    a.active {
+      font-weight: 700;
+      border-bottom: solid 0.2em $whiteColor;
+    }
   }
 
-  a.active {
-    font-weight: 700;
-    border-bottom: solid 0.2em $whiteColor;
+  .open-menu,
+  .close-menu {
+    display: none;
+  }
+}
+
+//----------MEDIA QUERY----------
+@media (width <= $breakpointLarge) {
+  nav {
+    img {
+      width: 40px;
+    }
+  }
+}
+
+//switch to hamburger menu
+@media (width < $breakpointMedium) {
+  nav {
+    .nav-btns {
+      position: fixed;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+
+      z-index: 4;
+
+      width: 10rem;
+      height: 100%;
+
+      right: -11rem;
+      top: 0;
+
+      padding-top: 5em;
+
+      border-left: solid 0.15em $whiteColor;
+
+      background-color: $blackColor;
+
+      transition: right 0.7s ease-in;
+
+      a {
+        margin: 0 0 1.5em;
+      }
+    }
+
+    .opened {
+      right: 0;
+    }
+
+    .open-menu {
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .close-menu {
+      display: flex;
+      align-self: center;
+
+      position: absolute;
+
+      top: 0;
+      right: 0;
+
+      margin: 0.75rem 1.9rem 0;
+    }
+  }
+
+  //darken background then menu is opened
+  nav::before {
+    content: "";
+    position: fixed;
+
+    width: 100vw;
+    height: 100vh;
+
+    z-index: -999;
+
+    top: 0;
+    left: 0;
+
+    opacity: 0;
+    background-color: $blackColorTransparent;
+    transition: opacity 0.7s ease-in;
+  }
+
+  .dark-bg::before {
+    z-index: 3;
+    opacity: 1;
   }
 }

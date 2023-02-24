@@ -36,14 +36,10 @@
     button {
       position: absolute;
 
-      width: 1.5rem;
-      aspect-ratio: 1;
-
-      top: 0.7rem;
-      right: 0.7rem;
+      top: 0.8rem;
+      right: 0.8rem;
 
       .material-icons {
-        font-size: 1.2rem;
         font-weight: 700;
       }
     }
@@ -51,5 +47,21 @@
 
   .apod-card::before {
     @include btnBefore(0.2em, 1em);
+  }
+}
+
+//----------MEDIA QUERY----------
+@media (width <= $breakpointMedium) {
+  .card-modal {
+    .apod-card {
+      .apod {
+        padding: 3.8rem 1.9rem;
+      }
+
+      button {
+        top: 1rem;
+        right: 1.5rem;
+      }
+    }
   }
 }

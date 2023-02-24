@@ -9,6 +9,11 @@
 
   background-color: $blackColor;
 
+  //----------MEDIA QUERY----------
+  @media (width <= $breakpointLarge) {
+    width: 100%;
+  }
+
   //----------SUN----------
   .sun {
     position: absolute;
@@ -239,14 +244,14 @@
       content: "";
       position: absolute;
 
-      width: 2rem;
+      width: 18%;
       aspect-ratio: 6;
 
       top: 50%;
       left: 150%;
       transform: translate(-50%, -50%);
 
-      border: solid 0.2rem $whiteColor;
+      border: solid 0.2em $whiteColor;
       border-radius: 50%;
       animation: ringSaturn $duration linear infinite;
     }

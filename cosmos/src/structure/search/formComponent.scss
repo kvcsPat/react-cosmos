@@ -6,10 +6,11 @@
   align-items: center;
 
   text-align: center;
-  margin: 4rem 0;
+  margin-top: 4.5rem;
 
   .text {
-    width: 17.5rem;
+    max-width: 17.5rem;
+    width: 100%;
 
     h1 {
       padding-bottom: 1rem;
@@ -30,31 +31,31 @@
     .inputs {
       display: inline-flex;
       gap: 1.25em;
-    }
 
-    label {
-      @include btnStyle(2.5em, 7em, 1em, $edge-size);
-      margin-bottom: 1.25em;
+      label {
+        @include btnStyle(2.5em, 7em, 1em, $edge-size);
+        margin-bottom: 1.25em;
 
-      input {
-        font-family: $numberFont;
-        font-weight: 400;
-        font-size: 1em;
+        input {
+          font-family: $numberFont;
+          font-weight: 400;
+          font-size: 1em;
 
-        color: $whiteColor;
+          color: $whiteColor;
 
-        -moz-appearance: textfield;
-        appearance: textfield;
+          -moz-appearance: textfield;
+          appearance: textfield;
+        }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+          display: none;
+        }
       }
 
-      input::-webkit-outer-spin-button,
-      input::-webkit-inner-spin-button {
-        display: none;
+      label::before {
+        @include btnBefore($border-width, $edge-size);
       }
-    }
-
-    label::before {
-      @include btnBefore($border-width, $edge-size);
     }
 
     button {
@@ -74,6 +75,34 @@
 
     button:hover::before {
       @include btnHover($edge-size);
+    }
+  }
+}
+
+//----------MEDIA QUERY----------
+@media (width <= $breakpointLarge) {
+  .search {
+    form {
+      button {
+        @include btnStyle(2.5em, 100%, 0, $edge-size);
+        justify-content: center;
+      }
+    }
+  }
+}
+
+@media (width < $breakpointSmall) {
+  .search {
+    form {
+      width: 100%;
+      .inputs {
+        width: 100%;
+        gap: 5%;
+
+        label {
+          @include btnStyle(2.5em, 30%, 0.7em, $edge-size);
+        }
+      }
     }
   }
 }

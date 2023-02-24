@@ -14,6 +14,20 @@ $numberFont: "Orbitron", sans-serif;
   align-items: $align-items;
 }
 
+//----------MEDIA QUERY----------
+
+//tablet/mobile view breakpoint
+$breakpointLarge: 62.5em;
+$breakpointMedium: 32.5em;
+$breakpointSmall: 29em;
+
+//general flexbox under breakpoint
+@mixin breakpointFlexbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 //----------HOME PAGE ANIMATIONS----------
 
 //planets appear
