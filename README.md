@@ -35,6 +35,9 @@ This project is deployed on Netlify. You can check it here:
 
 ## Setup
 
+You need an API key from [NASA Open APIs](https://api.nasa.gov/).
+Create a `.env` file in the `src` directory and assign your API key to `REACT_APP_NASA_APOD_KEY`.
+
 To run this project, install it locally using npm:
 
 ```
